@@ -14,10 +14,10 @@
 # Per-page layout changes:
 #
 # With no layout
-page "/", :layout => false
+#page "/", :layout => false
 #
 # With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
+ page "/blog/*", :layout => :bloglayout
 #
 # A path which all have the same layout
 # with_layout :admin do
