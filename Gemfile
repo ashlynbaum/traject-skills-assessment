@@ -15,3 +15,5 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 # Move build into root folder
 gem 'middleman-deploy', '~> 1.0'
+gem 'bootstrap-sass', '~> 3.3.4'
+gem 'font-awesome-sass', '~> 4.3.0'
