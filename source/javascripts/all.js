@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
   // Smooth Scroll
   $(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
+    $('.navbar a, .jumbotron a').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -46,5 +46,12 @@ $( document ).ready(function() {
       $('#myScrollspy collapse').addClass('navbar-inverse');
       $('#myScrollspy navbar-right').addClass('navbar-inverse');
   });
+  if ($('div').offset().top > 250){
+    $('#myScrollspy').removeClass('transparent');
+    $('#myScrollspy').addClass('navbar-inverse');
+    $('#myScrollspy').addClass('navbar-default');
+    $('#myScrollspy collapse').addClass('navbar-inverse');
+    $('#myScrollspy navbar-right').addClass('navbar-inverse');
+  }
 
 });
