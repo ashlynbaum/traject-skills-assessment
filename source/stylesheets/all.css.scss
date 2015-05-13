@@ -3,9 +3,54 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#construction{
-  max-width: 600px;
-  margin: 10em auto;
+/*****************
+Home Page
+******************/
+body {
+  position: relative;
+}
+/*****************
+Navigation
+******************/
+.navbar{
+  margin-bottom: 0;
+  border-radius: 0px;
+}
+
+#header{
+  // background: url("../images/upfeathers.png");
+  background-image: image-url("lights.jpg");
+  background-size: cover;
+  background-position: center;
   text-align: center;
-  height: 2000px;
+}
+
+.jumbotron{
+  background-color: transparent;
+  margin-bottom: 0;
+  padding: 10em 0;
+  height:100vh;
+}
+
+.jumbotron .btn{
+  border-radius: 100%;
+  padding: 1em;
+}
+
+#page{
+  background-color: blue;
+  height: 500px;
+}
+
+#projects{
+  background-image: image-url("footer_lodyas.png");
+}
+
+#projects .carousel .panel{
+  margin: 5% 20%;
+}
+
+#blog{
+  background-color: green;
+  height:  1500px;
 }
