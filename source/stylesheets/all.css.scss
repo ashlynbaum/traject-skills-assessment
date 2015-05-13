@@ -6,7 +6,7 @@
 /*****************
 Home Page
 ******************/
-body {
+body{
   position: relative;
 }
 /*****************
@@ -16,7 +16,10 @@ Navigation
   margin-bottom: 0;
   border-radius: 0px;
 }
-
+ul.navbar-right a{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 #header{
   // background: url("../images/upfeathers.png");
   background-image: image-url("lights.jpg");
