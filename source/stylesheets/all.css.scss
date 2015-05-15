@@ -3,9 +3,139 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#construction{
-  max-width: 600px;
-  margin: 10em auto;
-  text-align: center;
-  height: 2000px;
+/*****************
+Home Page
+******************/
+body{
+  position: relative;
 }
+
+section{
+  padding-bottom: 5em;
+  padding-top: 5em;
+}
+
+.heading{
+  font-family: 'HapnaMono-Light', Arial, sans-serif;
+}
+
+.heading h2{
+  font-size: 4em;
+  text-align: center;
+}
+
+@font-face{
+  font-family: 'HipnaMono-Light';
+  src: font-url('geometria_light_macroman');
+  // src: font-url('geometria_light_macroman.eot?#iefix') format('embedded-opentype'),
+  //      font-url('geometria_light_macroman.woff') format('woff'),
+  //      font-url('geometria_light_macroman.ttf') format('truetype'),
+  //      font-url('geometria_light_macroman.svg#webfont') format('svg');
+}
+
+/*****************
+Navigation
+******************/
+.navbar{
+  margin-bottom: 0;
+  border-radius: 0px;
+}
+ul.navbar-right a{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*****************
+Landing
+******************/
+#header{
+  background-image: image-url("lights.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.jumbotron{
+  background-color: transparent;
+  margin-bottom: 0;
+  padding: 10em 0;
+  height:100vh;
+}
+
+.jumbotron .btn{
+  border-radius: 100%;
+  padding: 1em;
+}
+.jumbotron .textbg{
+  color: white;
+  background: rgba(79, 79, 79, 0.6);
+  margin: 0 30%;
+}
+
+// .jumbotron h1, .jumbotron h2{
+//   font-family: 'HapnaMono-Light', Arial, sans-serif;
+//   text-align: center;
+// }
+/*****************
+First Section
+******************/
+#page{
+  background-color: blue;
+  height: 200px;
+}
+/*****************
+Current Projects
+******************/
+#projects{
+  background-image: image-url("footer_lodyas.png");
+}
+
+#projects .carousel .panel{
+  margin: 5% 20%;
+}
+#projects .heading{
+  color: #cdcdcd;
+}
+#projects .carousel-control{
+  background: none;
+}
+
+.panel-body{
+  background-color: lightgrey;
+}
+
+/*****************
+Blog
+******************/
+#blog{
+  background-color: green;
+  height:  200px;
+}
+/*****************
+Education
+******************/
+#education{
+  background-image: image-url("upfeathers.png");
+}
+.utLogo{
+  max-width: 120px;
+  padding: 10px;
+}
+
+.devLogo{
+  padding: 30px
+}
+
+.utLogo, .devLogo{
+  margin: 0 auto;
+  display: block;
+}
+/*****************
+About
+******************/
+#about{
+  background-color: aliceblue;
+}
+/*****************
+Contact
+******************/

@@ -1,12 +1,173 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    ...
-  </div>
-</nav>
+<nav id="myScrollspy" class="navbar transparent navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><i class="fa fa-diamond"></i></a>
+      </div>
 
-<section id="construction">
-  <h1>This page is under construction</h1>
-  <p>Please contact Ashlyn at: <a href="mailto:a@ashlynbaum.com">a@ashlynbaum.com</a> </p>
-  <i class="fa fa-facebook"></i>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#portfolio">Portfolio</a></liL>
+          <li><a href="#education">Education</a></liL>
+          <li><a href="#about">About</a></liL>
+          <li><a href="#contact">Contact</a></liL>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-github-square fa-2x"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+<!-- Jubotron -->
+<section id="header">
+  <div class="jumbotron">
+    <div class="textbg">
+      <h1>Ashlyn Baum </h1>
+      <h2>a short statement about things </h2>
+    </div>
+    <p><a class="btn btn-primary btn-lg" href="#page" role="button"><i class="fa fa-chevron-down fa-3x"></i></a></p>
+  </div>
 </section>
 
+<!-- Current Projects -->
+<section id="projects">
+  <div class="container-fluid">
+    <div class="row heading">
+      <h2>Current Projects</h2>
+    </div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="panel panel-default">
+            <div class="panel-body">
+            <h3>Sample Text 1</h3>
+             <p>Sample text about this project</p>
+            </div>
+          </div>
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+        <div class="item">
+          <div class="panel panel-default">
+            <div class="panel-body">
+            <h3>Sample Text 1</h3>
+            <p>Sample text about this project</p>
+            </div>
+          </div>
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+        <div class="item">
+          <div class="panel panel-default">
+            <div class="panel-body">
+            <h3>Sample Text 1</h3>
+            <p>Sample text about this project</p>
+            </div>
+          </div>
+            <div class="carousel-caption">
+              ...
+          </div>
+        </div>
+        ...
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- blog -->
+<section id="blog">
+  <div class="container-fluid">
+    <div class="row heading">
+      <h2>Blog</h2>
+      <h2><i></i></h2>
+    </div>
+  </div>
+</section>
+<!-- Portfolio -->
+<section id="portfolio">
+  <div class="container-fluid">
+    <div class="row heading">
+      <h2>Selected Works</h2>
+      <h2><i></i></h2>
+    </div>
+  </div>
+</section>
+
+<!-- education -->
+<section id="education">
+  <div class="container-fluid">
+    <div class="row heading">
+      <h2>Education</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-md-offset-3">
+        <img class="devLogo" src='images/devacademy.png' alt="University of Texas longhorn logo">
+      </div>
+      <div class="col-md-6">
+        <h3><a href="#">Web Development with Ruby</a></h3>
+        <h4><a href="#">Enspiral DevAcademy</a></h4>
+        <p>May 2015 to September 2015</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-md-offset-3">
+        <img class="utLogo" src='images/utexas.png' alt="University of Texas longhorn logo">
+      </div>
+      <div class="col-md-6">
+        <h3><a href="#">Geosystems Engineering and Hydrogeology</a></h3>
+        <h4><a href="#">The University of Texas at Austin</a></h4>
+        <p>August 2010 to May 2014</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container-fluid">
+    <div class="row heading">
+      <h2>Interests</h2>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container-fluid">
+    <div class="row heading">
+      <h2>Contact</h2>
+    </div>
+  </div>
+</section>
