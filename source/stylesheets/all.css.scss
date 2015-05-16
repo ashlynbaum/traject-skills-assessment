@@ -2,26 +2,51 @@
 @import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300);
 
 /*****************
-Home Page
+Color Variables
+******************/
+$primary-teal: #005757;
+$primary-white: #cdcdcd;
+
+/*****************
+Responsive
+******************/
+@media screen and (min-width: 480px) {
+  .v-align{
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*****************
+General
 ******************/
 body{
   position: relative;
 }
 
 section{
-  padding-bottom: 5em;
-  padding-top: 5em;
+  padding-bottom: 3em;
+  padding-top: 2em;
+  font-size: 18px;
 }
 
 .heading{
-  font-family: 'HapnaMono-Light', Arial, sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
 }
 
 .heading h2{
   font-size: 4em;
-  text-align: center;
+  margin-bottom: 0px;
+}
+
+.heading .underline{
+  width: 3em;
+  border-top: 4px solid;
+  display: inline-block;
 }
 
 @font-face{
@@ -65,43 +90,59 @@ Landing
 .jumbotron .btn{
   border-radius: 100%;
   padding: 1em;
+  border: 4px solid transparentize(white, 0.1);
+  background-color: transparent;
+
+  &:hover{
+    background-color: transparentize(white, 0.9);
+  }
 }
+
 .jumbotron .textbg{
   color: white;
   background: rgba(79, 79, 79, 0.6);
   margin: 0 30%;
 }
 
+
 // .jumbotron h1, .jumbotron h2{
 //   font-family: 'HapnaMono-Light', Arial, sans-serif;
 //   text-align: center;
-// }
-/*****************
-First Section
-******************/
-#page{
-  background-color: blue;
-  height: 200px;
-}
+
 /*****************
 Current Projects
 ******************/
 #projects{
-  background-image: image-url("footer_lodyas.png");
+  background-image: image-url("dark_wall/dark_wall.png");
+  color: $primary-white;
+}
+
+#projects a:not(.carousel-control){
+  color: $primary-teal;
+}
+
+#carousel-inner{
+  padding: 0 20px;
 }
 
 #projects .carousel .panel{
-  margin: 5% 20%;
-}
-#projects .heading{
-  color: #cdcdcd;
-}
+  background-color: transparent;
+  margin: 2em 3em 5em 3em;}
+
 #projects .carousel-control{
   background: none;
 }
 
-.panel-body{
-  background-color: lightgrey;
+.projImage{
+  background-color: $primary-teal;
+  font-size: 5em;
+  // border-radius: 100%;
+  text-align: center;
+}
+
+#projects .title{
+  font-size: 30px;
+  margin-top: 0;
 }
 
 /*****************
