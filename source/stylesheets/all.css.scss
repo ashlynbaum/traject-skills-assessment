@@ -10,6 +10,7 @@ Color Variables
 $primary-teal: #005757;
 $light-teal: #2B8888;
 $primary-white: #cdcdcd;
+$primary-purple: #2C1478;
 
 /*****************
 Responsive
@@ -50,6 +51,10 @@ section{
   font-size: 18px;
 }
 
+a:not(.carousel-control):not(.btn-primary){
+  color: $primary-teal;
+}
+
 .heading{
   font-family: 'Open Sans Condensed', Arial, sans-serif;
   text-align: center;
@@ -66,15 +71,6 @@ section{
   display: inline-block;
 }
 
-@font-face{
-  font-family: 'HipnaMono-Light';
-  src: font-url('geometria_light_macroman');
-  // src: font-url('geometria_light_macroman.eot?#iefix') format('embedded-opentype'),
-  //      font-url('geometria_light_macroman.woff') format('woff'),
-  //      font-url('geometria_light_macroman.ttf') format('truetype'),
-  //      font-url('geometria_light_macroman.svg#webfont') format('svg');
-}
-
 /*****************
 Navigation
 ******************/
@@ -88,20 +84,18 @@ ul.navbar-right a{
 }
 
 /*****************
-Landing
+Header
 ******************/
 #header{
-  background-image: image-url("lights.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: image-url("kale.jpg");
+  // background-size: cover;
+  // background-position: center;
   text-align: center;
+  height:100vh;
 }
 
 .jumbotron{
   background-color: transparent;
-  margin-bottom: 0;
-  padding: 10em 0;
-  height:100vh;
 }
 
 .jumbotron .btn{
@@ -111,7 +105,7 @@ Landing
   background-color: transparent;
 
   &:hover{
-    background-color: transparentize(white, 0.9);
+    background-color: transparentize(white, 0.8);
   }
 }
 
@@ -132,10 +126,6 @@ Current Projects
 #projects{
   background-image: image-url("dark_wall/dark_wall.png");
   color: $primary-white;
-}
-
-#projects a:not(.carousel-control){
-  color: $primary-teal;
 }
 
 #carousel-inner{
@@ -170,6 +160,15 @@ Blog
   height:  200px;
 }
 /*****************
+Selected Works
+******************/
+#portfolio{
+  background-image: image-url("multi-coloured-paint.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+/*****************
 Education
 ******************/
 #education{
@@ -192,10 +191,22 @@ Education
 About
 ******************/
 #about{
-  background-image: image-url("multi-coloured-paint.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: image-url("bicycle.png");
+  // background-size: cover;
+  // background-position: center;
   text-align: center;
+  color: $primary-white;
+  padding: 0;
+}
+
+#about .container-fluid{
+  background-color: transparentize(#2B8888, 0.2);
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+#about a{
+  color: $primary-purple;
 }
 /*****************
 Contact
@@ -204,10 +215,6 @@ Contact
   background-image: image-url("ginger_tea.jpg");
   background-size: cover;
   background-position: center;
-}
-
-#contact a{
-  color: $primary-teal;
 }
 
 #contact .container-fluid{
