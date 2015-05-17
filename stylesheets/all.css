@@ -9425,52 +9425,52 @@ Responsive
 
   /* line 31, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
   #header h2 {
-    font-size: 3em; } }
+    font-size: 3em; }
+
+  /* line 34, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+  .heading h2 {
+    font-size: 3em;
+    margin-bottom: 0px; } }
 @media screen and (max-width: 768px) {
-  /* line 37, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+  /* line 40, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
   #contact {
     text-align: center; }
 
-  /* line 40, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+  /* line 43, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
   #contact .row img {
     width: 180px; }
 
-  /* line 43, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+  /* line 46, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
   #contact .row .image-border {
     margin: 2em auto; }
 
-  /* line 47, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+  /* line 50, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
   .row .v-align {
     text-align: center; } }
 /*****************
 General
 ******************/
-/* line 54, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 57, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 body {
   position: relative;
   font-family: 'Open Sans', Arial, sans-serif; }
 
-/* line 59, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 62, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 section {
   padding-bottom: 3em;
   padding-top: 2em;
   font-size: 18px; }
 
-/* line 65, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 68, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 a:not(.carousel-control):not(.btn-primary) {
   color: #005757; }
 
-/* line 69, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 72, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .heading {
   font-family: 'Open Sans Condensed', Arial, sans-serif;
   text-align: center; }
 
-/* line 74, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-.heading h2 {
-  font-size: 4em;
-  margin-bottom: 0px; }
-
-/* line 79, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 77, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .heading .underline {
   width: 3em;
   border-top: 4px solid #005757;
@@ -9479,12 +9479,12 @@ a:not(.carousel-control):not(.btn-primary) {
 /*****************
 Navigation
 ******************/
-/* line 88, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 86, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .navbar {
   margin-bottom: 0;
   border-radius: 0px; }
 
-/* line 92, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 90, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 ul.navbar-right a {
   padding-top: 10px;
   padding-bottom: 10px; }
@@ -9492,100 +9492,108 @@ ul.navbar-right a {
 /*****************
 Header
 ******************/
-/* line 100, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 98, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #header {
   background-image: url("/images/kale.jpg");
   min-height: 100vh;
   text-align: center; }
 
-/* line 109, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 107, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .jumbotron {
   background-color: transparent; }
 
-/* line 113, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 111, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .jumbotron .btn {
   border-radius: 100%;
   padding: 1em;
   border: 4px solid rgba(255, 255, 255, 0.9);
   background-color: transparent; }
-  /* line 119, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+  /* line 117, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
   .jumbotron .btn:hover {
     background-color: rgba(255, 255, 255, 0.2); }
 
-/* line 124, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 122, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .jumbotron .textbg {
   margin: 0 auto; }
 
-/* line 129, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 127, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .jumbotron .nextbtn {
   padding-top: 6em; }
+
+/* line 131, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+.jumbotron .row {
+  margin: auto 0; }
 
 /*****************
 Current Projects
 ******************/
-/* line 136, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 138, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #projects {
   background-image: url("/images/dark_wall/dark_wall.png");
   color: #cdcdcd; }
 
-/* line 141, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 143, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #carousel-inner {
   padding: 0 20px; }
 
-/* line 145, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 147, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #projects .carousel .panel {
   background-color: transparent;
   margin: 2em 13% 5em 13%; }
 
-/* line 149, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 151, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #projects .carousel-control {
   background: none; }
 
-/* line 153, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 155, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .projImage {
   background-color: #2B8888;
   font-size: 5em;
   text-align: center; }
 
-/* line 160, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 162, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #projects .title {
   font-size: 2em; }
 
 /*****************
 Blog
 ******************/
-/* line 167, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 169, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #blog {
-  background-color: green;
-  height: 200px; }
+  display: none; }
 
 /*****************
 Selected Works
 ******************/
-/* line 174, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 175, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #portfolio {
-  background-image: url("/images/multi-coloured-paint.jpg");
-  background-size: cover;
-  background-position: center;
-  text-align: center; }
+  background-image: url("/images/squares.png");
+  text-align: center;
+  padding: 0; }
+
+/* line 184, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+#portfolio .container-fluid {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 2em;
+  padding-bottom: 3em; }
 
 /*****************
 Education
 ******************/
-/* line 183, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 192, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #education {
   background-image: url("/images/light_noise_diagonal/light_noise_diagonal.png"); }
 
-/* line 186, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 195, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .utLogo {
   max-width: 120px;
   padding: 10px; }
 
-/* line 191, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 200, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .devLogo {
   padding: 30px; }
 
-/* line 195, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 204, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .utLogo, .devLogo {
   margin: 0 auto;
   display: block; }
@@ -9593,46 +9601,46 @@ Education
 /*****************
 About
 ******************/
-/* line 202, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 211, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #about {
   background-image: url("/images/bicycle.png");
   text-align: center;
   color: #cdcdcd;
   padding: 0; }
 
-/* line 211, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 220, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #about .container-fluid {
   background-color: rgba(43, 136, 136, 0.8);
   padding-top: 2em;
   padding-bottom: 3em; }
 
-/* line 217, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 226, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #about a {
   color: #2C1478; }
 
 /*****************
 Contact
 ******************/
-/* line 223, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 232, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #contact {
   background-image: url("/images/ginger_tea.jpg");
   background-size: cover;
   background-position: center; }
 
-/* line 229, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 238, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #contact .container-fluid {
   background-color: rgba(255, 255, 255, 0.7);
   padding-bottom: 2em; }
 
-/* line 234, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 243, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #contact .row {
   padding: 2em auto; }
 
-/* line 238, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 247, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #contact img {
   width: 220px; }
 
-/* line 242, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 251, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .image-border {
   border: 4px solid #2B8888;
   border-radius: 100%;
@@ -9642,6 +9650,20 @@ Contact
 /*****************
 footer
 ******************/
-/* line 251, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+/* line 260, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #footer {
-  background-color: #222222; }
+  background-color: #222222;
+  text-align: center;
+  padding: 0; }
+
+/* line 266, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+#footer .row {
+  padding: 5px 0; }
+
+/* line 270, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+#footer p {
+  margin-bottom: 0px; }
+
+/* line 274, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
+#footer .row i {
+  margin: auto 1em; }
