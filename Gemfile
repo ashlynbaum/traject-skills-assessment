@@ -21,3 +21,6 @@ gem "bootstrap-sass", :require => false
 gem 'font-awesome-sass', '~> 4.3.0'
 
 gem 'jquery-middleman'
+
+#favicon
+gem "middleman-favicon-maker"
