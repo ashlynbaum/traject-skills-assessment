@@ -36,6 +36,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.8)
     autoprefixer-rails (5.1.11)
       execjs
       json
@@ -89,6 +90,10 @@ GEM
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    middleman-blog (3.5.3)
+      addressable (~> 2.3.5)
+      middleman-core (~> 3.2)
+      tzinfo (>= 0.3.0)
     middleman-deploy (1.0.0)
       middleman-core (>= 3.2)
       net-sftp
@@ -157,6 +162,7 @@ DEPENDENCIES
   font-awesome-sass (~> 4.3.0)
   jquery-middleman
   middleman!
+  middleman-blog
   middleman-deploy (~> 1.0)
   middleman-favicon-maker
   middleman-livereload (~> 3.1.0)

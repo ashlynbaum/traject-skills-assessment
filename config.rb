@@ -17,7 +17,7 @@
 #page "/", :layout => false
 #
 # With alternative layout
- page "/blog/*", :layout => :bloglayout
+# page "/blog/*", :layout => :bloglayout
 #
 # A path which all have the same layout
 # with_layout :admin do
@@ -93,5 +93,7 @@ activate :deploy do |deploy|
 end
 
 activate :blog do |blog|
-  # set options on blog
+  blog.permalink = "blog/{title}.html"
+  blog.sources = "blog/{year}-{month}-{day}-{title}.html"
+  blog.layout = "blog_layout"
 end
