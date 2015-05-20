@@ -24,3 +24,6 @@ gem 'jquery-middleman'
 
 #favicon
 gem "middleman-favicon-maker"
+
+# Blog
+gem "middleman-blog"
