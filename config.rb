@@ -17,7 +17,9 @@
 #page "/", :layout => false
 #
 # With alternative layout
-# page "/blog/*", :layout => :bloglayout
+# page "/blog/*", :layout => :blog_layout
+page "/blog/*", :layout => :blog_layout
+
 #
 # A path which all have the same layout
 # with_layout :admin do
@@ -36,9 +38,9 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -93,7 +95,32 @@ activate :deploy do |deploy|
 end
 
 activate :blog do |blog|
-  blog.permalink = "blog/{title}.html"
-  blog.sources = "blog/{year}-{month}-{day}-{title}.html"
-  blog.layout = "blog_layout"
+  # This will add a prefix to all links, template references and source paths
+  blog.prefix = "blog"
+
+  # Matcher for blog source files
+  blog.permalink = "{title}"
+  blog.sources = "{year}-{month}-{day}-{title}.html"
+  blog.layout = "layouts/blog_layout"
+
+  blog.taglink = "tags/{tag}.html"
+
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+
+  blog.summary_separator = /(READMORE)/
+  blog.summary_length = 250
+
+  blog.paginate = true
+
+  blog.year_link = "{year}.html"
+  blog.month_link = "{year}/{month}.html"
+  blog.day_link = "{year}/{month}/{day}.html"
+  blog.default_extension = ".markdown"
+
+  Time.zone = "Auckland"
+  # Enable pagination
+  # blog.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/{num}"
 end

@@ -67,6 +67,9 @@ section{
 
 a:not(.carousel-control):not(.btn-primary){
   color: $primary-teal;
+  :hover{
+    color: $light-teal;
+  }
 }
 
 .heading{
@@ -167,7 +170,25 @@ Current Projects
 Blog
 ******************/
 #blog{
-  // display: none;
+  background-image: image-url('texres/texres.png')
+}
+
+#blog .row.page{
+  text-align: center;
+  color: $gray-light;
+}
+
+#blog .left, #blog .right{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: $gray-light;
+  font-size: 2em;
+}
+
+#blog .blognav{
+  display: flex;
+  padding-bottom: 2em;
 }
 /*****************
 Selected Works
