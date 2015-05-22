@@ -11,7 +11,7 @@ per_page: 2
   <div class="row blognav">
     <div class="col-md-2 left">
       <% if prev_page %>
-          <p><%= link_to '<i class="fa fa-chevron-left"></i>', prev_page %></p>
+          <p><%= link_to '<i class="fa fa-chevron-left"></i>', prev_page, class: 'prev-page' %></p>
       <% else %>
           <p><i class="fa fa-chevron-left"></i></p>
         <% end %>
@@ -28,7 +28,7 @@ per_page: 2
     <div class="col-md-2 right">
       <% if paginate %>
         <% if next_page %>
-          <p><%= link_to '<i class="fa fa-chevron-right"></i>', next_page %></p>
+          <p><%= link_to '<i class="fa fa-chevron-right"></i>', next_page, class: 'next-page' %></p>
         <% else %>
           <P><i class="fa fa-chevron-right"></i></P>
         <% end %>

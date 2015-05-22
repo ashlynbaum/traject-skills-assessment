@@ -107,12 +107,15 @@ activate :blog do |blog|
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
-
+  # blog list summary
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
 
+  # pagination
   blog.paginate = true
+  blog.page_link = "p{num}"
 
+  # year format
   blog.year_link = "{year}.html"
   blog.month_link = "{year}/{month}.html"
   blog.day_link = "{year}/{month}/{day}.html"

@@ -54,4 +54,22 @@ $( document ).ready(function() {
     $('#myScrollspy navbar-right').addClass('navbar-inverse');
   }
 
+  // load previous page of blog
+  $(document).on('click', 'a.prev-page', function(e){
+    e.preventDefault();
+    var link = $('a.prev-page').attr('href');
+    console.log("Prev link is " + link);
+    $("#blog").load(link + " #blog");
+  });
+
+  // load next page of blog
+  $(document).on('click', 'a.next-page', function(e){
+    e.preventDefault();
+    var link = $('a.next-page').attr('href');
+    console.log("next link is " + link);
+    $("#blog").load(link + " #blog");
+  });
+
+
+
 });
