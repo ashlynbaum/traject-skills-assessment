@@ -27,3 +27,6 @@ gem "middleman-favicon-maker"
 
 # Blog
 gem "middleman-blog"
+
+#format markdown
+gem "redcarpet"
