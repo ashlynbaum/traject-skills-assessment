@@ -54,20 +54,16 @@ $( document ).ready(function() {
     $('#myScrollspy navbar-right').addClass('navbar-inverse');
   }
 
-  // load previous page of blog
-  $(document).on('click', 'a.prev-page', function(e){
-    e.preventDefault();
-    var link = $('a.prev-page').attr('href');
-    $("#blog").load(link + " #blog");
-  });
-
-  // load next page of blog
-  $(document).on('click', 'a.next-page', function(e){
-    e.preventDefault();
-    var link = $('a.next-page').attr('href');
-    $("#blog").load(link + " #blog");
-  });
-
+  // Automatic load of blog listing with next and previous links
+  var loadPage = function(element){
+      $(document).on('click', element, function(e){
+      e.preventDefault();
+      var link = $(element).attr('href');
+      $("#blog").load(link + " #blog");
+    })
+  };
+  loadPage('a.next-page');
+  loadPage('a.prev-page');
 
 
 });
