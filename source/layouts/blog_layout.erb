@@ -62,6 +62,7 @@
         <div class="col-md-9">
           <div class="title">
             <h2><%= current_article.title unless current_article.nil? %></h2>
+            <p class="date"><%= current_article.date.strftime('%B %d, %Y') %></p>
           </div>
           <!-- Yield in blog articles -->
             <%= yield %>
@@ -71,7 +72,7 @@
             <h3>Recent Articles</h3>
             <ul class="list-unstyled">
               <% blog.articles[0...10].each do |article| %>
-                <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+                <li><%= link_to article.title, article %></li>
               <% end %>
             </ul>
 

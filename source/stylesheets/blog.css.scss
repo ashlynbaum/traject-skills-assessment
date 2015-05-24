@@ -12,7 +12,6 @@ $light-white: #F4F4F4;
 #articles #header{
   min-height: 0;
   text-align: left;
-  margin-bottom: 5%;
 }
 
 #articles .jumbotron{
@@ -33,6 +32,10 @@ $light-white: #F4F4F4;
   max-width: 1000px;
   background-color: $light-white;
   padding: 2em 3em;
+}
+
+#articles .title .date{
+  color: gray;
 }
 
 #articles .sidebar{
@@ -61,6 +64,8 @@ $light-white: #F4F4F4;
 @media screen and (min-width: 769px) {
   #articles .title h2{
     font-size: 60px;
-    margin-bottom: 50px;
+  }
+  #articles .title{
+      margin-bottom: 40px;
   }
 }
