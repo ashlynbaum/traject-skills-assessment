@@ -62,7 +62,7 @@
         <div class="col-md-9">
           <div class="title">
             <h2><%= current_article.title unless current_article.nil? %></h2>
-            <p class="date"><%= current_article.date.strftime('%B %d, %Y') %></p>
+            <p class="blog-date"><%= current_article.date.strftime('%B %d, %Y') unless current_article.nil? %></p>
           </div>
           <!-- Yield in blog articles -->
             <%= yield %>
