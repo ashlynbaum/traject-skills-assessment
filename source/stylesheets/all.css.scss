@@ -237,6 +237,9 @@ About
   text-align: center;
   color: $primary-white;
   padding: 0;
+  .row{
+    padding: 0 10px;
+  }
 }
 
 #about .container-fluid{
