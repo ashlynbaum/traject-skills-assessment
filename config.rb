@@ -71,7 +71,7 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
@@ -102,11 +102,11 @@ activate :blog do |blog|
   blog.prefix = "articles"
 
   # Matcher for blog source files
-  blog.permalink = "{title}"
+  blog.permalink = "{title}.html"
   blog.sources = "{year}-{month}-{day}-{title}.html"
   blog.layout = "layouts/blog_layout"
 
-  blog.taglink = "tags/{tag}.html"
+  blog.taglink = "{tag}.html"
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
