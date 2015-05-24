@@ -26,11 +26,13 @@ Responsive
     padding-left: 2em;
   }
 
-  #header h1{
-    font-size: 6em;
-  }
-  #header h2{
-    font-size: 3em;
+  #header{
+    h1 {
+      font-size: 6em;
+    }
+    h2{
+      font-size: 3em;
+    }
   }
   .heading h2{
     font-size: 3em;
@@ -40,12 +42,12 @@ Responsive
 @media screen and (max-width: 768px) {
   #contact{
     text-align: center;
-  }
-  #contact .row img{
-    width: 180px;
-  }
-  #contact .row .image-border{
-    margin: 2em auto;
+    .row img{
+      width: 180px;
+      .image-border{
+        margin: 2em auto;
+      }
+    }
   }
 
   .row .v-align{
@@ -68,7 +70,7 @@ section{
 
 a:not(.carousel-control):not(.btn-primary){
   color: $primary-teal;
-  :hover{
+  &:hover{
     color: $light-teal;
   }
 }
@@ -76,12 +78,11 @@ a:not(.carousel-control):not(.btn-primary){
 .heading{
   font-family: 'Open Sans Condensed', Arial, sans-serif;
   text-align: center;
-}
-
-.heading .underline{
-  width: 3em;
-  border-top: 4px solid $primary-teal;
-  display: inline-block;
+  .underline{
+    width: 3em;
+    border-top: 4px solid $primary-teal;
+    display: inline-block;
+  }
 }
 
 /*****************
@@ -110,30 +111,26 @@ Header
 
 .jumbotron{
   background-color: transparent;
-}
+  .btn{
+    border-radius: 100%;
+    padding: 1em;
+    border: 4px solid transparentize(white, 0.1);
+    background-color: transparent;
 
-.jumbotron .btn{
-  border-radius: 100%;
-  padding: 1em;
-  border: 4px solid transparentize(white, 0.1);
-  background-color: transparent;
-
-  &:hover{
-    background-color: transparentize(white, 0.8);
+    &:hover{
+      background-color: transparentize(white, 0.8);
+    }
   }
-}
-
-.jumbotron .textbg{
-  // background: transparentize(black, 0.8);
-  margin: 0 auto;
-}
-
-.jumbotron .nextbtn{
-  padding-top: 6em;
-}
-
-.jumbotron .row{
-  margin: auto 0;
+  .textbg{
+    // background: transparentize(black, 0.8);
+    margin: 0 auto;
+  }
+  .nextbtn{
+    padding-top: 6em;
+  }
+  .row{
+    margin: auto 0;
+  }
 }
 
 /*****************
@@ -142,18 +139,20 @@ Current Projects
 #projects{
   background-image: image-url("dark_wall/dark_wall.png");
   color: $primary-white;
+  .carousel .panel{
+    background-color: transparent;
+    margin: 2em 13% 5em 13%;}
+
+  .carousel-control{
+    background: none;
+  }
+  .title{
+    font-size: 2em;
+  }
 }
 
 #carousel-inner{
   padding: 0 20px;
-}
-
-#projects .carousel .panel{
-  background-color: transparent;
-  margin: 2em 13% 5em 13%;}
-
-#projects .carousel-control{
-  background: none;
 }
 
 .projImage{
@@ -163,34 +162,28 @@ Current Projects
   text-align: center;
 }
 
-#projects .title{
-  font-size: 2em;
-}
-
 /*****************
 Blog
 ******************/
 #blog{
-  background-image: image-url('texres/texres.png')
+  background-image: image-url('texres/texres.png');
+  .row.page{
+    text-align: center;
+    color: $gray-light;
+  }
+  .left,  .right{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: $gray-light;
+    font-size: 2em;
+  }
+  .blognav{
+    display: flex;
+    padding-bottom: 2em;
+  }
 }
 
-#blog .row.page{
-  text-align: center;
-  color: $gray-light;
-}
-
-#blog .left, #blog .right{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: $gray-light;
-  font-size: 2em;
-}
-
-#blog .blognav{
-  display: flex;
-  padding-bottom: 2em;
-}
 /*****************
 Selected Works
 ******************/
@@ -201,12 +194,11 @@ Selected Works
   // background-position: center;
   text-align: center;
   padding: 0;
-}
-
-#portfolio .container-fluid{
-  background-color: transparentize(white, 0.2);
-  padding-top: 2em;
-  padding-bottom: 3em;
+  .container-fluid{
+    background-color: transparentize(white, 0.2);
+    padding-top: 2em;
+    padding-bottom: 3em;
+  }
 }
 /*****************
 Education
@@ -240,17 +232,18 @@ About
   .row{
     padding: 0 10px;
   }
+  .container-fluid{
+    background-color: transparentize(#2B8888, 0.2);
+    padding-top: 2em;
+    padding-bottom: 3em;
+  }
+  a{
+    color: $primary-purple;
+  }
 }
 
-#about .container-fluid{
-  background-color: transparentize(#2B8888, 0.2);
-  padding-top: 2em;
-  padding-bottom: 3em;
-}
 
-#about a{
-  color: $primary-purple;
-}
+
 /*****************
 Contact
 ******************/
@@ -258,19 +251,16 @@ Contact
   background-image: image-url("ginger_tea.jpg");
   background-size: cover;
   background-position: center;
-}
-
-#contact .container-fluid{
-  background-color: transparentize(white, 0.3);
-  padding-bottom: 2em;
-}
-
-#contact .row{
-  padding: 2em auto;
-}
-
-#contact img{
-  width: 220px;
+  .container-fluid{
+    background-color: transparentize(white, 0.3);
+    padding-bottom: 2em;
+  }
+  .row{
+    padding: 2em auto;
+  }
+  img{
+    width: 220px;
+  }
 }
 
 .image-border{
@@ -286,16 +276,13 @@ footer
   background-color:$gray-darker ;
   text-align: center;
   padding: 0;
-}
-
-#footer .row{
-  padding: 5px 0;
-}
-
-#footer p{
-  margin-bottom: 0px;
-}
-
-#footer .row i{
-  margin:auto 10px;
+  .row{
+    padding: 5px 0;
+  }
+  p{
+    margin-bottom: 0px;
+  }
+  .row i{
+    margin:auto 10px;
+  }
 }
