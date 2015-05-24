@@ -1,6 +1,6 @@
 /* line 4, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
 #articles {
-  background-image: url("/images/white_bed_sheet/white_bed_sheet.png"); }
+  background-image: url("../images/white_bed_sheet/white_bed_sheet.png"); }
   /* line 8, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
   #articles p {
     font-size: 18px; }

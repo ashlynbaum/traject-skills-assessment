@@ -8,8 +8,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700|Open+Sans+Condensed:300,700);
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/fonts/font-awesome/fontawesome-webfont.eot");
-  src: url("/fonts/font-awesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/font-awesome/fontawesome-webfont.woff2") format("woff2"), url("/fonts/font-awesome/fontawesome-webfont.woff") format("woff"), url("/fonts/font-awesome/fontawesome-webfont.ttf") format("truetype"), url("/fonts/font-awesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  src: url("../fonts/font-awesome/fontawesome-webfont.eot");
+  src: url("../fonts/font-awesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/font-awesome/fontawesome-webfont.woff2") format("woff2"), url("../fonts/font-awesome/fontawesome-webfont.woff") format("woff"), url("../fonts/font-awesome/fontawesome-webfont.ttf") format("truetype"), url("../fonts/font-awesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* line 4, /Users/ashlynbaum/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_core.scss */
@@ -2650,8 +2650,8 @@ th {
     border: 1px solid #ddd !important; } }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 /* line 22, /Users/ashlynbaum/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_glyphicons.scss */
 .glyphicon {
   position: relative;
@@ -9497,7 +9497,7 @@ Header
 ******************/
 /* line 102, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #header {
-  background-image: url("/images/kale.jpg");
+  background-image: url("../images/kale.jpg");
   min-height: 100vh;
   text-align: center; }
 
@@ -9532,7 +9532,7 @@ Current Projects
 ******************/
 /* line 142, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #projects {
-  background-image: url("/images/dark_wall/dark_wall.png");
+  background-image: url("../images/dark_wall/dark_wall.png");
   color: #cdcdcd; }
 
 /* line 147, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
@@ -9563,7 +9563,7 @@ Blog
 ******************/
 /* line 173, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #blog {
-  background-image: url("/images/texres/texres.png"); }
+  background-image: url("../images/texres/texres.png"); }
 
 /* line 177, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #blog .row.page {
@@ -9588,7 +9588,7 @@ Selected Works
 ******************/
 /* line 197, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #portfolio {
-  background-image: url("/images/squares.png");
+  background-image: url("../images/squares.png");
   text-align: center;
   padding: 0; }
 
@@ -9603,7 +9603,7 @@ Education
 ******************/
 /* line 214, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #education {
-  background-image: url("/images/light_noise_diagonal/light_noise_diagonal.png"); }
+  background-image: url("../images/light_noise_diagonal/light_noise_diagonal.png"); }
 
 /* line 217, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 .utLogo {
@@ -9624,7 +9624,7 @@ About
 ******************/
 /* line 233, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #about {
-  background-image: url("/images/bicycle.png");
+  background-image: url("../images/bicycle.png");
   text-align: center;
   color: #cdcdcd;
   padding: 0; }
@@ -9644,7 +9644,7 @@ Contact
 ******************/
 /* line 254, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
 #contact {
-  background-image: url("/images/ginger_tea.jpg");
+  background-image: url("../images/ginger_tea.jpg");
   background-size: cover;
   background-position: center; }
 
