@@ -3,48 +3,52 @@ $light-white: #F4F4F4;
 
 #articles{
   background-image: image-url("white_bed_sheet/white_bed_sheet.png");
+
+
+  p{
+    font-size: 18px;
+  }
+
+   #header{
+    min-height: 0;
+    text-align: left;
+  }
+
+   .jumbotron{
+    padding: 3em 0 1em 0;
+  }
+
+   #header h1{
+    font-size: 4em;
+  }
+
+   #header h2{
+    font-size: 2em;
+    margin-top: 0;
+  }
+
+  #main{
+    margin: 2em auto;
+    max-width: 1000px;
+    background-color: $light-white;
+    padding: 2em 3em;
+  }
+
+   .title .blog-date{
+    color: gray;
+  }
+
+   .sidebar{
+    margin-top: 1em;
+  }
+
+   #footer{
+    margin-top: 3em;
+    position: absolute;
+    width: 100%;
+  }
 }
 
-#articles p{
-  font-size: 18px;
-}
-
-#articles #header{
-  min-height: 0;
-  text-align: left;
-}
-
-#articles .jumbotron{
-  padding: 3em 0 1em 0;
-}
-
-#articles #header h1{
-  font-size: 4em;
-}
-
-#articles #header h2{
-  font-size: 2em;
-  margin-top: 0;
-}
-
-#main{
-  margin: 2em auto;
-  max-width: 1000px;
-  background-color: $light-white;
-  padding: 2em 3em;
-}
-
-#articles .title .date{
-  color: gray;
-}
-
-#articles .sidebar{
-  margin-top: 1em;
-}
-
-#articles #footer{
-  margin-top: 3em;
-}
 
 @media screen and (max-width: 768px) {
   #articles #header .jumbotron h1{

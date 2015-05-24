@@ -18,7 +18,7 @@
 #
 # With alternative layout
 # page "/blog/*", :layout => :blog_layout
-page "/blog/*", :layout => :blog_layout
+page "/articles/*", :layout => :blog_layout
 
 #
 # A path which all have the same layout
@@ -99,7 +99,7 @@ end
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  blog.prefix = "blog"
+  blog.prefix = "articles"
 
   # Matcher for blog source files
   blog.permalink = "{title}"
@@ -110,6 +110,7 @@ activate :blog do |blog|
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
+
   # blog list summary
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
