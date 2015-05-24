@@ -5,12 +5,12 @@ tags: JavaScript
 ---
 
 
-`.load()` is a method in the jquery library that uses AJAX to rendor data. `.load()` makes a call to the server and returns READMORE HTML. I use this method to call the next page of article listings on my blog listed at, www.ashlynbaum.com, and load the results without refreshing the page.
+`.load()` is a method in the jQuery library that uses AJAX to render data. `.load()` makes a call to the server and returns READMORE HTML. I use this method to call the next page of article listings on my blog listed at, www.ashlynbaum.com, and load the results without refreshing the page.
 
 ##What I learned in the process
 Initially I started by targeting the link that would refresh the page `a.next-page`. Then call the `.on()` method to load the next page of information when the link is clicked.
 
-First Attempt -- the incorrect way
+First Attempt
 
 ``` javascript
 $(a.next-page).on(click, function(e){
@@ -26,7 +26,7 @@ Looking at the `.on()` method documentation, the format is `.on( events [, selec
 
 The most important option to consider when using the `.on()` method for this purpose is the `[selector]` option. "A selector string to filter the descendants of the selected elements that trigger the event" (2). So by adding the anchor tag as string for the `[selector]`, the method is now considered *delegated*  instead of *direct*. 
 
-Making the method delegated
+After making the method delegated
 
 ``` javascript
 $(document).on('click', 'a.next-page', function(e){
