@@ -18,7 +18,7 @@ per_page: 3
     </div>
     <div class="col-md-8">
       <% page_articles.each_with_index do |article, i| %>
-        <h2><%= link_to article.title, article %> <span> - <%= article.date.strftime('%b %e') %></span></h2>
+        <h3><%= link_to article.title, article %> <span> - <%= article.date.strftime('%b %e') %></span></h3>
         <!-- use article.summary(250) if you have Nokogiri available to show just
              the first 250 characters -->
         <%= article.summary %> <span>...</span>

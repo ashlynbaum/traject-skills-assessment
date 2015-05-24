@@ -25,6 +25,7 @@ $light-white: #F4F4F4;
     max-width: 1000px;
     background-color: $light-white;
     padding: 2em 3em;
+    min-height: 60vh;
   }
   .title .blog-date{
     color: gray;
@@ -53,6 +54,12 @@ $light-white: #F4F4F4;
   }
   #main{
     margin: 1em 2em;
+    h1{
+      font-size: 22px;
+    }
+    h3{
+      font-size: 20px;
+    }
   }
 }
 @media screen and (min-width: 769px) {
