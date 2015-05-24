@@ -1,4 +1,3 @@
-console.log('test');
 /*!
  * jQuery JavaScript Library v1.10.2
  * http://jquery.com/
@@ -12156,5 +12155,17 @@ $( document ).ready(function() {
     $('#myScrollspy collapse').addClass('navbar-inverse');
     $('#myScrollspy navbar-right').addClass('navbar-inverse');
   }
+
+  // Automatic load of blog listing with next and previous links
+  var loadPage = function(element){
+      $(document).on('click', element, function(e){
+      e.preventDefault();
+      var link = $(element).attr('href');
+      $("#blog").load(link + " #blog");
+    })
+  };
+  loadPage('a.next-page');
+  loadPage('a.prev-page');
+
 
 });

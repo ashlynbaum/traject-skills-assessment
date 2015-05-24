@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="initial-scale=1">
+
+
+    <title>Blog Title - To merge or to rebase</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/articles/feed.xml" />
+
+    <link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/all.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/blog.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+  <body id="articles">
+    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../"><i class="fa fa-diamond"></i></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-inverse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../#projects">Projects</a></li>
+            <li><a href="#blog" class="selected">Articles</a></li>
+            <li><a href="../#portfolio">Portfolio</a></liL>
+            <li><a href="../#education">Education</a></liL>
+            <li><a href="../#about">About</a></liL>
+            <li><a href="../#contact">Contact</a></liL>
+          </ul>
+          <ul class="nav navbar-nav navbar-inverse navbar-right">
+              <li><a href="https://github.com/ashlynbaum"><i class="fa fa-github-square fa-2x"></i></a></li>
+              <li><a href="https://twitter.com/AshlynBaum"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+              <li><a href="https://nz.linkedin.com/pub/ashlyn-baum/46/b09/514"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Jubotron -->
+    <div id="header">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h1>Ashlyn Baum</h1>
+            <h2>Professional Problem Solver</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="title">
+            <h2>To merge or to rebase</h2>
+            <p class="blog-date">May 22, 2015</p>
+          </div>
+          <!-- Yield in blog articles -->
+            <p>To merge or to rebase: a question that many developers struggle with. When using git, it is common to have a remote repository and a local working version of that same repository. Merging and rebasing are different ways to sync repositories, or branches within a repository. Which leads to the question: when should I merge and when should I rebase. </p>
+
+<h2 id="syncing-repositories">Syncing repositories</h2>
+
+<pre><code>$ git pull &lt;remote name&gt; &lt;branch name&gt;
+</code></pre>
+
+<p><code>git pull</code> is a command comprised of <code>fetch</code> and <code>merge FETCH_HEAD</code>. </p>
+
+<pre><code>$ git fetch &lt;remote name&gt;
+$ git merge &lt;remote name&gt;/&lt;remote branch name&gt;
+</code></pre>
+
+<p><code>fetch</code> downloads changes from the remote repository without changing anything on your local repository. </p>
+
+<p>So the next question is when syncing a remote repository (typically origin) to your local repository, do you want to then merge or rebase. </p>
+
+<h3 id="merging">Merging</h3>
+
+<p><code>merge</code> will create a commit that will inherit the changes of the remote to the local repository. Merging puts all of the changes at the top of the history stack. Merging can be useful for merging branches together. But in the case of syncing you local repository, the extra commit message is not necessary, and clutters the git history.</p>
+
+<h3 id="rebasing">Rebasing</h3>
+
+<p><code>rebase</code> will take the changes from the remote, and then integrate the changes into your local history, without creating a merge commit. Rebasing is a good choice if you local directory is private.</p>
+
+<p>As a general rule of thumb: never <code>rebase</code> on a branch or directory that someone else is working off of, because rebasing changes the git history and will create conflicts with future merges. In most cases, your local branch is a private branch; and changing git history a safe thing to do. Thus it makes more sense to rebase instead of pulling. </p>
+
+<p>Say for example that the history of your remote repository has been changed. This could happen if someone rebased on that repository, changed commit ID&rsquo;s, or squashed commits. In this case the commit history on the remote repository does not match the local repository. If you were to attempt to merge in this case, you would have a conflict due to commit ID&rsquo;s not matching.  But if you were to rebase, your local history would rewritten and the only conflicts presented will be actual conflicts in the code-base.</p>
+
+<p>How to rebase instead of pulling:</p>
+
+<pre><code>$ git fetch
+$ git rebase &lt;remote name&gt;/&lt;branch name&gt;
+
+or
+
+$ git pull --rebase &lt;remote name&gt; &lt;branch name&gt;
+</code></pre>
+
+<h2 id="branches">Branches</h2>
+
+<p>Merging is still preferable when you are working on a directory that someone has branched off of, or if you are merging branches back towards source. Having the changes in a single commit allows for simple resetting or reverting. If your merge were to introduce a bug, having all of the changes at the top of the working tree allow you to <code>reset</code> or <code>revert</code> much easier than if all of the commits from the branch were individually added to the working history.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Typically I <code>rebase</code> when pulling from the remote repository, and when keeping a local private branch up to date with the commit history of the upstream target branch. 
+My typical work flow looks like this:</p>
+
+<pre><code>$ git fetch &lt;remote name&gt;
+$ git status
+$ git rebase &lt;remote name&gt;/&lt;branch name&gt;
+</code></pre>
+
+<p>Using the commands separately allows me to check the status of the changes and make an informed decision on if I want to merge or rebase. I typically <code>merge</code> between branches. There are times when I will rebase a branch: when working on a feature branch and commits are added to the source branch, I will rebase the source onto the feature branch to account for those change. This will make merging back into the source branch easier and have less conflicts.</p>
+
+<p>Now go code, and rebase often!</p>
+
+<hr>
+
+<h4 id="references:">References:</h4>
+
+<ol>
+<li><a href="http://git-scm.com/docs/git-pull">http://git-scm.com/docs/git-pull</a></li>
+<li><a href="http://git-scm.com/docs/git-merge">http://git-scm.com/docs/git-merge</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">https://git-scm.com/book/en/v2/Git-Branching-Rebasing</a></li>
+</ol>
+
+        </div>
+        <div class="col-md-3 sidebar">
+          <aside>
+            <h4>Recent Articles</h4>
+            <ul class="list-unstyled">
+                <li><a href="/articles/git-pull-vs-rebase">To merge or to rebase</a></li>
+                <li><a href="/articles/event-handling-in-jquery">Event handling in jQuery</a></li>
+            </ul>
+
+            <h4>Categories</h4>
+            <ul class="list-unstyled">
+                <li><a href="/articles/tags/javascript.html">JavaScript (1)</a></li>
+                <li><a href="/articles/tags/git.html">Git (1)</a></li>
+            </ul>
+
+            <h4>By Year</h4>
+            <ul class="list-unstyled">
+                <li><a href="/articles/2015.html">2015 (2)</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <section id="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <p>
+            <a href="https://github.com/ashlynbaum"><i class="fa fa-github-square fa-2x"></i></a>
+            <a href="https://twitter.com/AshlynBaum"><i class="fa fa-twitter-square fa-2x"></i></a>
+            <a href="https://nz.linkedin.com/pub/ashlyn-baum/46/b09/514"><i class="fa fa-linkedin-square fa-2x"></i></a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

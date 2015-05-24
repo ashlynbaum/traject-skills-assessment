@@ -1,0 +1,63 @@
+/* line 4, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+#articles {
+  background-image: url("/images/white_bed_sheet/white_bed_sheet.png"); }
+  /* line 8, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles p {
+    font-size: 18px; }
+  /* line 12, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles #header {
+    min-height: 0;
+    text-align: left; }
+  /* line 17, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles .jumbotron {
+    padding: 3em 0 1em 0; }
+  /* line 21, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles #header h1 {
+    font-size: 4em; }
+  /* line 25, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles #header h2 {
+    font-size: 2em;
+    margin-top: 0; }
+  /* line 30, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles #main {
+    margin: 2em auto;
+    max-width: 1000px;
+    background-color: #F4F4F4;
+    padding: 2em 3em; }
+  /* line 37, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles .title .blog-date {
+    color: gray; }
+  /* line 41, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles .sidebar {
+    margin-top: 1em; }
+  /* line 45, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles #footer {
+    margin-top: 3em;
+    position: absolute;
+    width: 100%; }
+
+@media screen and (max-width: 768px) {
+  /* line 54, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles #header .jumbotron h1 {
+    font-size: 2em; }
+
+  /* line 57, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles #header h2 {
+    font-size: 16px; }
+
+  /* line 60, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles #header {
+    background-size: 100px;
+    background-position: 0 4em; }
+
+  /* line 64, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #main {
+    margin: 1em 2em; } }
+@media screen and (min-width: 769px) {
+  /* line 69, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles .title h2 {
+    font-size: 60px; }
+
+  /* line 72, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/blog.css.scss */
+  #articles .title {
+    margin-bottom: 40px; } }
