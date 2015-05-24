@@ -5,7 +5,7 @@ tags: JavaScript
 ---
 
 
-`.load()` is a method in the jQuery library that uses AJAX to render data. `.load()` makes a call to the server and returns READMORE HTML. I use this method to call the next page of article listings on my blog listed at, www.ashlynbaum.com, and load the results without refreshing the page.
+`.load()` is a method in the jQuery library that READMOREuses AJAX to render data. `.load()` makes a call to the server and returns HTML. I use this method to call the next page of article listings on my blog listed at, www.ashlynbaum.com, and load the results without refreshing the page.
 
 ##What I learned in the process
 Initially I started by targeting the link that would refresh the page `a.next-page`. Then call the `.on()` method to load the next page of information when the link is clicked.

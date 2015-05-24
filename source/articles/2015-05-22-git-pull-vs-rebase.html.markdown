@@ -4,7 +4,7 @@ date: 2015-05-22 15:58 NZST
 tags: Git
 ---
 
-To merge or to rebase: a question that many developers struggle with. When using git, it is common to have aREADMORE remote repository and a local working version of that same repository. Merging and rebasing are different ways to sync repositories, or branches within a repository. Which leads to the question: when should I merge and when should I rebase. 
+To merge or to rebase: a question that many developersREADMORE struggle with. When using git, it is common to have a remote repository and a local working version of that same repository. Merging and rebasing are different ways to sync repositories, or branches within a repository. Which leads to the question: when should I merge and when should I rebase. 
 
 ##Syncing repositories
 ```
