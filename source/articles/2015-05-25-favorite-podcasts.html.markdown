@@ -1,5 +1,5 @@
 ---
-title: My Podcasts Picks
+title: My podcasts picks
 date: 2015-05-25 09:47 NZST
 tags: Picks
 ---
