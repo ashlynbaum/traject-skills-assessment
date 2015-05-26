@@ -30,3 +30,6 @@ gem "middleman-blog"
 
 #format markdown
 gem "redcarpet"
+
+# Google analytics
+gem "middleman-google-analytics"
