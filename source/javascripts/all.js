@@ -85,13 +85,38 @@ $(window).scroll(function() {
     var topOfWindow = $(window).scrollTop();
     var bottomOfWindow = $(window).scrollTop() + $(window).height();
     if (imagePos < topOfWindow + 600) {
-      $(this).addClass('animated swing');
+      $(this).addClass('animated pulse');
       $(this).closest('.row').find('.uni').addClass('animated pulse');
     }
     if (imagePos < topOfWindow || imagePos > bottomOfWindow ) {
-      $(this).removeClass('animated swing');
+      $(this).removeClass('animated pulse');
       $(this).closest('.row').find('.uni').removeClass('animated pulse');
     }
   });
-});
+  // Animate about
+  $('#about').find('a').each(function() {
+    var imagePos = $(this).offset().top;
 
+    var topOfWindow = $(window).scrollTop();
+    var bottomOfWindow = $(window).scrollTop() + $(window).height();
+    if (imagePos < topOfWindow + 600) {
+      $(this).addClass('animated bounce');
+    }
+    if (imagePos < topOfWindow || imagePos > bottomOfWindow ) {
+      $(this).removeClass('animated bounce');
+    }
+  });
+  // Animate Contact
+    $('#contact').find('.anmt').each(function() {
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+    var bottomOfWindow = $(window).scrollTop() + $(window).height();
+    if (imagePos < topOfWindow + 600) {
+      $(this).addClass('animated shake');
+    }
+    if (imagePos < topOfWindow || imagePos > bottomOfWindow ) {
+      $(this).removeClass('animated shake');
+    }
+  });
+});
