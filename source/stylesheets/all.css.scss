@@ -78,10 +78,21 @@ Responsive
   .row .v-align{
     text-align: center;
   }
+  #projects{
+    .row{
+      text-align: center;
+    }
+  }
   #education{
     .utLogo{
       margin: 0 auto;
       padding-top: 1em;
+    }
+  }
+  #portfolio{
+    img{
+      max-width: 90%;
+      margin-top: 1em;
     }
   }
 }
