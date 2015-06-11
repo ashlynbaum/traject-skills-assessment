@@ -10,8 +10,8 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= content_for?(:title) ? yield_content(:title) : 'Ashlyn Baum' %></title>
 
-    <%= stylesheet_link_tag "normalize", "all" %>
-    <%= javascript_include_tag  "all" %>
+    <%= stylesheet_link_tag "normalize", "all", "hover", "animate" %>
+
 
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
@@ -154,17 +154,28 @@
           <h2>Selected Works</h2>
           <div class="underline"></div>
         </div>
-        <div class="row">
-          <h3><a target="_blank" href="http://www.devasana.com">Devasana</a></h3>
-          <p>Design and Development</p>
-        </div>
-        <div class="row">
-          <h3><a target="_blank" href="http://www.webdevhour.com">WebDevHour</a></h3>
-          <p>Design and Development</p>
-        </div>
-        <div class="row">
-          <h3><a target="_blank" href="http://www.elementalbeats.com">ElementalBeats</a></h3>
-          <p>Design and Development</p>
+        <div class="row items">
+          <div class="col-md-4 item">
+            <a target="_blank" href="http://www.webdevhour.com">
+              <img src="images/webdevhour_demo.png" alt="development demo of www.webdevhour.com">
+              <h2>WebDevHour</h2>
+            </a>
+            <p>Design and Development</p>
+          </div>
+          <div class="col-md-4 item offset">
+            <a target="_blank" href="http://www.devasana.com">
+              <img src="images/Devasana_demo.png" alt="development demo of www.devasana.com">
+              <h2>Devasana</h2>
+            </a>
+            <p>Design and Development</p>
+          </div>
+          <div class="col-md-4 item">
+            <a target="_blank" href="http://www.elementalbeats.com">
+              <img src="images/eb_demo.png" alt="development demo of www.elementalbeats.com">
+              <h2>ElementalBeats</h2>
+            </a>
+            <p>Design and Development</p>
+          </div>
         </div>
       </div>
     </section>
@@ -176,7 +187,7 @@
           <h2>Education</h2>
           <div class="underline"></div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-3 col-md-offset-3">
             <img class="devLogo" src='images/devacademy.png' alt="University of Texas longhorn logo">
           </div>
@@ -185,17 +196,29 @@
             <h4><a target="_blank" href="http://devacademy.co.nz/">Enspiral DevAcademy</a></h4>
             <p>May 2015 to September 2015</p>
           </div>
+        </div> -->
+        <div class="col-md-5 col-md-offset-2">
+          <h3><strong>Formal Education</strong></h3>
         </div>
         <div class="row">
-          <div class="col-md-3 col-md-offset-3">
-            <img class="utLogo" src='images/utexas.png' alt="University of Texas longhorn logo">
-          </div>
-          <div class="col-md-6">
-            <h3><a target="_blank"href="http://www.utexas.edu/student/registrar/catalogs/ug06-08/ch06/ch06i.html">Geosystems Engineering and Hydrogeology</a></h3>
+          <div class="col-md-5 col-md-offset-3">
+            <h3><a class="uni" target="_blank"href="http://www.utexas.edu/student/registrar/catalogs/ug06-08/ch06/ch06i.html">Geosystems Engineering and Hydrogeology</a></h3>
             <h4><a target="_blank" href="http://www.utexas.edu/">The University of Texas at Austin</a></h4>
-            <p>August 2010 to May 2014</p>
+            <p>August 2010 to Dec 2013 |
+            <a target="_blank"href="http://www.utexas.edu/student/registrar/catalogs/ug06-08/ch06/ch06i.html"> see course description</a></p>
+          </div>
+          <div class="col-md-3">
+            <img class="utLogo" src='images/longhorn.png' alt="University of Texas longhorn logo">
           </div>
         </div>
+       <div class="col-md-9 col-md-offset-2">
+         <h3><strong>Skill Set</strong></h3>
+         <div class="row"><div class="col-md-2"><h4><strong>Front End</strong></h4></div><div class="col-md-9 list-skill"><p>Angular.JS | JQuery | Sass | Wordpress</p></div></div>
+         <div class="row"><div class="col-md-2"><h4><strong>Back End</strong></h4></div><div class="col-md-9 list-skill"><p>JavaScript | Node.JS | Ruby on Rails</p></div></div>
+         <div class="row"><div class="col-md-2"><h4><strong>Testing</strong></h4></div><div class="col-md-9 list-skill"><p>Mocha | Rspec & Capybara </p></div></div>
+         <div class="row"><div class="col-md-2"><h4><strong>Design & UX</strong></h4></div><div class="col-md-9 list-skill"><p> Photoshop | Illustrator | Sketch | Balsamiq</p></div></div>
+         <div class="row"><div class="col-md-2"><h4><strong>General</strong></h4></div><div class="col-md-9 list-skill"><p>MySQL | MongoDB | Redis | Socket.io | Matlab | ArcGIS </p></div></div>
+       </div>
       </div>
     </section>
 
@@ -206,12 +229,12 @@
           <h2>Interests</h2>
           <div class="underline"></div>
         </div>
-        <div class="row">
-          <p>In my spare time, besides programming, I like to move my body.</p>
-          <p>My hobbies include, yoga, acrobatics, hula-hooping, dancing, bicycling, and cooking.</p>
-          <p>I love to teach all forms of movement, either in structured class, or in community settings.</p>
-          <p>View a short documentary about my role in <a href="https://vimeo.com/67172151">Longhorn Circus.</a></p>
+        <div class="row about-text">
+          <div class="col-md-6 col-md-offset-3">
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp Outside of development, I like to practice yoga and acrobatics, all things flow arts, build communities, look at rocks, bicycle, and make the world a better place. I believe one of the best things you can do is keep your body in motion. Generally speaking, I always have my eyes open to opportunities for personal growth.</p>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp View a short documentary about my role in <a href="https://vimeo.com/67172151">Longhorn Circus</a>, a student organization at the University of Texas that I co-founded. This group of circus enthusiasts are still meeting today, changing peoples lives for the better.</p>
           </div>
+        </div>
       </div>
     </section>
 

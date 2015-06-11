@@ -11,7 +11,8 @@ Color Variables
 $primary-teal: #005757;
 $light-teal: #2B8888;
 $primary-white: #cdcdcd;
-$primary-purple: #2C1478;
+$primary-purple: #4F0A86;
+$ut-orange: #C75B12;
 
 /*****************
 Responsive
@@ -38,6 +39,15 @@ Responsive
     font-size: 3em;
     margin-bottom: 0px;
   }
+
+  #portfolio{
+    .offset{
+      padding-top: 4em;
+    }
+    img{
+      max-width: 350px;
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   body{
@@ -59,6 +69,12 @@ Responsive
   }
   .row .v-align{
     text-align: center;
+  }
+  #education{
+    .utLogo{
+      margin: 0 auto;
+      padding-top: 1em;
+    }
   }
 }
 /*****************
@@ -114,10 +130,12 @@ Header
   min-height:100vh;
   // color: $primary-white;
   text-align: center;
+  position: relative;
 }
 
 .jumbotron{
   background-color: transparent;
+  padding: 48px 0 110px 0;
   .btn{
     border-radius: 100%;
     padding: 1em;
@@ -133,7 +151,10 @@ Header
     margin: 0 auto;
   }
   .nextbtn{
-    padding-top: 6em;
+    position: absolute;
+    bottom: 16%;
+    left: unquote("calc(50% - 50px)");
+
   }
   .row{
     margin: auto 0;
@@ -212,18 +233,23 @@ Education
 ******************/
 #education{
   background-image: image-url("light_noise_diagonal/light_noise_diagonal.png");
+  .list-skill{
+    margin: 8px 0 0 0;
+  }
+  a{
+    color: $ut-orange;
+  }
 }
 .utLogo{
-  max-width: 120px;
-  padding: 10px;
+  max-width: 230px;
+  padding: 0;
 }
 
 .devLogo{
-  padding: 30px
+  padding: 30px;
 }
 
 .utLogo, .devLogo{
-  margin: 0 auto;
   display: block;
 }
 /*****************
@@ -233,11 +259,14 @@ About
   background-image: image-url("bicycle.png");
   // background-size: cover;
   // background-position: center;
-  text-align: center;
+  text-align: left;
   color: $primary-white;
   padding: 0;
   .row{
     padding: 0 10px;
+  }
+  .about-text{
+    margin: 1em 0;
   }
   .container-fluid{
     background-color: transparentize(#2B8888, 0.2);
@@ -292,4 +321,60 @@ footer
   .row i{
     margin:auto 10px;
   }
+}
+
+/*****************
+Animations
+******************/
+.animate-grow-large {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.animate-grow-large, .animate-grow-large:hover, .animate-grow-large:focus, .animate-grow-large:active {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+.animate-out{
+  isplay: inline-block;
+  vertical-align: middle;
+  -webkit-transform: scale(1.0);
+  transform: scale(1.0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+/* Shrink */
+.animate-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.animate-shrink, .animate-shrink:hover, .animate-shrink:focus, .animate-shrink:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }
