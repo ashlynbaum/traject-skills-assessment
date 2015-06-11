@@ -5,19 +5,19 @@
 // carousel
 $('.carousel').carousel({
   interval: 15000
-})
+});
 // Highlight navbar elements on page
-$('body').scrollspy({ target: '#myScrollspy', offset: 50 })
+$('body').scrollspy({ target: '#myScrollspy', offset: 50 });
 
 // Smooth Scroll
 $(function() {
   $('.navbar a, .jumbotron a').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top-50
+          scrollTop: target.offset().top - 50
         }, 500);
         return false;
       }
@@ -28,23 +28,23 @@ $(function() {
 // Affix nav bar
 $('#myScrollspy').affix({
   offset: { top: 250 }
-})
+});
 
-$('#myScrollspy').on('affix-top.bs.affix', function(){
+$('#myScrollspy').on('affix-top.bs.affix', function() {
   $('#myScrollspy').addClass('transparent');
   $('#myScrollspy').removeClass('navbar-inverse');
   $('#myScrollspy').removeClass('navbar-default');
   $('#myScrollspy collapse').removeClass('navbar-inverse');
   $('#myScrollspy navbar-right').removeClass('navbar-inverse');
 });
-$('#myScrollspy').on('affix.bs.affix', function(){
+$('#myScrollspy').on('affix.bs.affix', function() {
   $('#myScrollspy').removeClass('transparent');
   $('#myScrollspy').addClass('navbar-inverse');
   $('#myScrollspy').addClass('navbar-default');
   $('#myScrollspy collapse').addClass('navbar-inverse');
   $('#myScrollspy navbar-right').addClass('navbar-inverse');
 });
-if ($('div').offset().top > 250){
+if ($('div').offset().top > 250) {
   $('#myScrollspy').removeClass('transparent');
   $('#myScrollspy').addClass('navbar-inverse');
   $('#myScrollspy').addClass('navbar-default');
@@ -59,7 +59,7 @@ var loadPage = function(element) {
     var link = $(element).attr('href');
     $('#blog').load(link + ' #blog', function() {
       $('#blog .col-md-8').css({ opacity: 0 } );
-      $('#blog .col-md-8').animate({ opacity: 1 }, 'slow' );
+      $('#blog .col-md-8').animate({ opacity: 1 }, 'slow;' );
     });
   });
 };
