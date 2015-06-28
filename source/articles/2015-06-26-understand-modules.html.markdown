@@ -4,41 +4,56 @@ date: 2015-06-26 13:01 NZST
 tags: JavaScript
 ---
 
-I have been working on a project using Node.js. With Node.js there are  READMORE so many options on how to organize your site, there may be a few best practice standards but many things come down to personal preference. One thing that many people agree on though is to make it modular. Break your large applications up into many small independent working parts, or modules.
+I have been working on a project using Node.js. With Node.js there are  READMORE so many options on how to organize your site, there are a few best practices out there but many things come down to personal preference. One thing that many people agree on, though, is to make it modular. Break your large applications up into many small independent working parts, or modules.
 
-Typical trajectories for building an application is: monolith first, and is the approach I took. I started build the back-end functionality of my application in one single file. This allowed me to recognize the hierarchy of the callbacks, see structure, and keep things organized in my mind. From there, I built integration tests which made refactoring easier. At that point, I could move the functionality of the application into individual self-contained files, known as modules.
+Typical trajectories for building an application is: monolith first, which is the approach I took. I started to build the back-end functionality of my application in one single file. This allowed me to recognize the hierarchy of  callbacks, see structure, and keep things organized in my mind. From there, I built integration tests which made refactoring easier. At that point, I could move the functionality of the application into individual self-contained files, known as modules.
 
 ## Installing modules
 
 You can include public modules hosted on Node Package Manager, `npm`, using the following command.
 
-``` $ npm install name-of-module```
+```command-line
+$ npm install name-of-module
+```
+
+To save the module in your `package.json` file:
+
+```command-line
+$ npm install --save name-of-module
+```
+
+To save the module in `package.json` to only be required in your development environment:
+
+```command-line
+$ npm install --save-dev name-of-module
+```
 
 Or you can write them yourself by exporting functionality of your code into small independent files. 
 
 When installing a public module with `npm`, it will go directly to your `node_module` directory. Make sure you ignore this directory from version control.
 
 ## Comparing JavaScript modules with Ruby gems
-Modules are great! They are easy to use and implement into your project. Node modules declare their dependencies, thus you cannot have version conflict issues. When compared to ruby gems, which do have version conflict issue, JavaScript modules' independence can definitely be seen as an advantage. 
+Modules are great! They are easy to use and implement into your project. Node modules declare their dependencies, thus you cannot have version conflict issues. When compared to ruby gems, which do have version conflict issues, JavaScript modules' independence can definitely be seen as an advantage. 
 
-The downside to the independence of JavaScript modules is that you have to declare every dependency in every file. This is makes using JavaScript modules less 'dry' when compared to using Gems with Ruby. Gems use global variables to require everything once. Basically, with JavaScript modules you will end up writing more code, but you will not have to deal with version conflicts.
+The downside to the independence of JavaScript modules is that you have to declare every dependency in every file. This is makes using JavaScript modules less 'dry' when compared to using Gems with Ruby. Gems use global variables to require everything once. Basically, with JavaScript modules you will end up writing slightly more code, but you will not have to deal with version conflicts.
 
 ## Components of a module
 
-There are 3 main parts to a module: What you require, your content, and what you export.
+There are three main parts to a module: what you require, your content, and what you export.
 
 When calling `require()` in an application, it will return `module.exports`.
 
 If you install modules from npm, then you will only have to worry about requiring the module. But if you would like to break your application up into small independent parts, then you will likely write your own modules.
 
 ## How to require a module
-If your module is in a `node_module` directory you do not need to give the direct path name.
+If your module is in a `node_modules` directory you do not need to give the direct path name.
 
 ```javascript
-var helper = require('helper');
+var helper = require('helpers');
 ```
 
 The file structure will look something like this:
+
 ```
 /project-root
     /node_modles
@@ -46,18 +61,23 @@ The file structure will look something like this:
     app.js
 ```
 
-If your module is not in a `node_module` directory. Add a `./` in front of the file or directory name to indicate the `helper` directory is located on same level of the directory as the file it is being required in. If it is located one directory up then replace `./` with `../` and so on.
+If your module is not in a `node_modules` directory. Add a `./` in front of the file or directory name to indicate the `helpers` directory is located on same level of the directory as the file it is being required in. If it is located one directory up then replace `./` with `../` and so on.
 
 ```javascript
-var helper = require('./helper')
+var helper = require('./helpers')
 ```
+
 The file structure will look something like this:
+
 ```
 /project-root
-    /node_modles
+    /node_modules
     /helpers
+        index.js
     app.js
 ```
+
+When including a directory like the `helpers` directory in the example above, as opposed to specifying a file, node will automatically load the `index.js` file within the required directory.
 
 For further reading on file loading structure, check out the [Node.js API](https://nodejs.org/docs/latest/api/modules.html#modules_file_modules).
 
@@ -74,13 +94,13 @@ Root/
 
 When you require a module, first node will look at the current level for the module, then in the `node_modules` directory. If it is not found in the first `node_modules` directory, then it will move up a directory in your application directory, and look for the module. Node will then look inside, this higher level `node_modules` directory to see if the modules live there. 
 
-Thus if when ever you require any module, it will look in both `node_module` directories for your required module automatically. The need to preface `./` to describe the path to the module is not necessary if the modules live in either of the `node_module` directories. 
+Thus, when ever you require any module, it will look in both `node_modules` directories for your required module automatically. The need to preface `./` to describe the path to the module is not necessary if the modules live in either of the `node_modules` directories. 
 
 ## Different exporting patterns
-There are three main ways to to export in a modules. The most common ways are to either a function, an object, or a prototype. Exporting anonymously allows for simpler client interface; while named exports allow for more versatility when exporting because you have the ability to export more than one block. 
+There are three main ways to to export a module. The most common ways are to either export a function, an object, or a prototype. Exporting anonymously allows for simpler client interface; while named exports allow for more versatility when exporting because you have the ability to export more than one block. 
 
 ### Exporting functions
-With exporting a function you can place the contents of your module in line with the export of the module.
+With exporting a function, you can place the contents of your module in line with the export of the module.
 
 #### Exporting an anonymous function
 
@@ -143,7 +163,7 @@ var sample = require('sample');
 sample.string(argument);
 ```
 
-Another way to export an anonymous object be to just set the object equal to `module.exports`. View the routes example below to see this method being used.
+Another way to export an anonymous object be to just set the object equal to `module.exports`. View the routes example below to see this example in action.
 
 ```javascript
 module.exports = {};
@@ -215,15 +235,15 @@ sample.string(argument);
 ```
 
 ### Stay away form exporting global variables
-Using global variables with Node.js makes the module no longer independent. In general, global variables will allow you to write least amount of code, and add some magic to your application, but can create some conflicts in the future. 
+Using global variables with Node.js makes the module no longer independent. In general, global variables will allow you to write the least amount of code, and add some magic to your application, but can create some conflicts in the future. 
 
-For example, the global variables that you define could already have assignment within your program and the conflict of variable assignment can create bugs with in your application. It is best practice to define local variables and call the local variable when needed.
+For example, the global variables that you define could already have been assigned within your program, and the conflict of variable assignment can create bugs within your application. It is best practice to define local variables and call the local variable when needed.
 
 ## Modules are not just for Node.js.
-Use [browserify](http://browserify.org/) to include modules to use them in the front end environment. You can require modules the same way you would in node, but run them in the browser.
+You can use [browserify](http://browserify.org/) to include modules to use in the browser. You can require modules the same way you would in node, but run them in the browser.
 
 ## Example defining routes
-In this example, in the `index.js` file of the `/routes` directory, I export an anonymous object. Some people will name the `/routes` directory as a `/models` directory.
+In the example below, in the `index.js` file in the `/routes` directory, I export an anonymous object. Some people may name the `/routes` directory as a `/models` directory.
 
 ```javascript
 // routes/index.js
@@ -235,7 +255,7 @@ module.exports = {
  };
 ```
 
-Within the `app.js` file, I require the routes directory which will automatically include the index.js file located within `/routes`.
+Within the `app.js` file, I require the routes directory which will automatically include the `index.js` file located within `/routes`.
 
 ```javascript
 //app.js
@@ -250,7 +270,9 @@ app.post('/events', routes.events.create(db));
 
 ```
 
-In this instance the application, `./routes` has been required in `app.js`. Node will load the top level `index.js` file within the `./routes` directory. `Index.js` exports an anonymous object, that contains methods which require other modules. 
+The `index.js` file exports an anonymous object, that contains methods which require other modules. 
+
+In `app.js`, `routes.events.create(db)` calls an anonymous function located in the `create.js`, a file within the `routes` directory. The database `db` variable is sent in as an argument to `routes.create.events()` because it should only be defined once, not repeatedly inside each module.
 
 ```javascript
 //routes/events/create.js
@@ -265,9 +287,6 @@ module.exports = function(db){
 }
 ```
 
-In `app.js`, `routes.events.create()` calls an anonymous function located in the `create.js`, a file within the `routes` directory. 
-
 ***
-### Resources
-1. [Node.js API]()
-1. [Module Patterns](http://darrenderidder.github.io/talks/ModulePatterns/#/10)
+
+In conclusion, this has been a short introductory into using modules in your Node.js application. Happy hacking y'all.
