@@ -190,15 +190,10 @@ Header
 Current Projects
 ******************/
 #projects{
+  padding-left: 4%;
+  padding-right: 4%;
   background-image: image-url("dark_wall/dark_wall.png");
   color: $primary-white;
-  .carousel .panel{
-    background-color: transparent;
-    margin: 2em 13% 5em 13%;}
-
-  .carousel-control{
-    background: none;
-  }
   .title{
     font-size: 2em;
   }
@@ -219,11 +214,6 @@ Current Projects
     }
   }
 }
-
-#carousel-inner{
-  padding: 0 20px;
-}
-
 
 /*****************
 Blog
