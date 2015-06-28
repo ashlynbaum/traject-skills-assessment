@@ -2,6 +2,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 
+hljs.initHighlightingOnLoad();
+
 // carousel
 $('.carousel').carousel({
   interval: 15000
