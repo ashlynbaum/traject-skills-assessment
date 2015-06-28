@@ -12,6 +12,7 @@ $primary-teal: #005757;
 $light-teal: #2B8888;
 $primary-white: #cdcdcd;
 $primary-purple: #4F0A86;
+$light-purple: #B57DE2;
 $ut-orange: #C75B12;
 
 /*****************
@@ -252,6 +253,9 @@ Selected Works
     padding-top: 2em;
     padding-bottom: 3em;
   }
+  .items{
+    margin-top: 3%;
+  }
 }
 /*****************
 Education
@@ -299,7 +303,7 @@ About
     padding-bottom: 3em;
   }
   a{
-    color: $primary-purple;
+    color: $light-purple;
   }
 }
 
