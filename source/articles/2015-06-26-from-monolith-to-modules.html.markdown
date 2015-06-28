@@ -4,7 +4,7 @@ date: 2015-06-26 13:01 NZST
 tags: JavaScript
 ---
 
-I have been working on a project using Node.js. With Node.js there are so many options on how to READMOREorganise your site, there may be a few best practice standards but many things come down to personal preference. One thing that many people agree on though is to make it modular. Break your large applications up into many small independent working parts, or modules.
+I have been working on a project using Node.js. With Node.js there are  READMORE so many options on how to organize your site, there may be a few best practice standards but many things come down to personal preference. One thing that many people agree on though is to make it modular. Break your large applications up into many small independent working parts, or modules.
 
 Typical trajectories for building an application is: monolith first, and is the approach I took. I started build the back-end functionality of my application in one single file. This allowed me to recognize the hierarchy of the callbacks, see structure, and keep things organized in my mind. From there, I built integration tests which made refactoring easier. At that point, I could move the functionality of the application into individual self-contained files, known as modules.
 
