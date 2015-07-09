@@ -3,11 +3,7 @@ title: Startup Weekend Research
 date: 2015-07-08 16:11 NZST
 tags: entrepreneur
 ---
-All things research READMORE.
-
-The topic : 
-
-All things research. Pitches at this StartUp weekend had to come from research based ideas.
+All things research READMORE. Pitches at this StartUp weekend had to come from research based ideas.
 
 My contribution :
 
