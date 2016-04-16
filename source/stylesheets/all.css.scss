@@ -123,6 +123,10 @@ a:not(.carousel-control):not(.btn-primary){
   }
 }
 
+.italic {
+  font-style: italic;
+}
+
 .heading{
   font-family: 'Open Sans Condensed', Arial, sans-serif;
   text-align: center;
@@ -185,6 +189,22 @@ Header
   .row{
     margin: auto 0;
   }
+}
+
+/*****************
+Traject
+******************/
+#traject {
+  padding-left: 4%;
+  padding-right: 4%;
+  background-image: image-url("white_wall/white_wall.png");
+  .title{
+    font-size: 2em;
+  }
+  .traject-logo img {
+    width: 100%;
+  }
+
 }
 
 /*****************
