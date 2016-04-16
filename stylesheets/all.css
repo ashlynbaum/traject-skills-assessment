@@ -9581,7 +9581,7 @@ Traject
     font-size: 2em; }
   /* line 204, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
   #traject .traject-logo img {
-    max-width: 200px; }
+    width: 100%; }
 
 /*****************
 Current Projects
