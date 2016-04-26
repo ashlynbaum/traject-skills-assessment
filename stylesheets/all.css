@@ -9439,10 +9439,10 @@ Responsive
     max-width: 350px; }
 
   /* line 53, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-  #projects .projImage {
+  .projects .projImage {
     float: right; }
   /* line 56, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-  #projects .row:nth-child(3) {
+  .projects .row:nth-child(3) {
     padding-top: 2em; } }
 @media screen and (max-width: 768px) {
   /* line 63, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
@@ -9468,7 +9468,7 @@ Responsive
     text-align: center; }
 
   /* line 83, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-  #projects .row {
+  .projects .row {
     text-align: center; }
 
   /* line 88, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
@@ -9572,31 +9572,31 @@ Header
 Traject
 ******************/
 /* line 197, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-#traject {
+.traject {
   padding-left: 4%;
   padding-right: 4%;
   background-image: url("../images/white_wall/white_wall.png"); }
   /* line 201, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-  #traject .title {
+  .traject .title {
     font-size: 2em; }
   /* line 204, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-  #traject .traject-logo img {
+  .traject .traject-logo img {
     width: 100%; }
 
 /*****************
 Current Projects
 ******************/
 /* line 213, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-#projects {
+.projects {
   padding-left: 4%;
   padding-right: 4%;
   background-image: url("../images/dark_wall/dark_wall.png");
   color: #cdcdcd; }
   /* line 218, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-  #projects .title {
+  .projects .title {
     font-size: 2em; }
   /* line 221, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-  #projects .projImage {
+  .projects .projImage {
     background-color: #2B8888;
     font-size: 5em;
     text-align: center;
@@ -9604,11 +9604,11 @@ Current Projects
     width: 130px;
     height: 130px; }
     /* line 229, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-    #projects .projImage i {
+    .projects .projImage i {
       width: 100px;
       height: 100px; }
     /* line 233, /Users/ashlynbaum/projects/ashlynbaum.github.io/source/stylesheets/all.css.scss */
-    #projects .projImage a, #projects .projImage :hover {
+    .projects .projImage a, .projects .projImage :hover {
       color: #cdcdcd; }
 
 /*****************
