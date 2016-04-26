@@ -49,7 +49,7 @@ Responsive
       max-width: 350px;
     }
   }
-  #projects{
+  .projects{
     .projImage{
       float: right;
     }
@@ -79,7 +79,7 @@ Responsive
   .row .v-align{
     text-align: center;
   }
-  #projects{
+  .projects{
     .row{
       text-align: center;
     }
@@ -194,7 +194,7 @@ Header
 /*****************
 Traject
 ******************/
-#traject {
+.traject {
   padding-left: 4%;
   padding-right: 4%;
   background-image: image-url("white_wall/white_wall.png");
@@ -210,7 +210,7 @@ Traject
 /*****************
 Current Projects
 ******************/
-#projects{
+.projects{
   padding-left: 4%;
   padding-right: 4%;
   background-image: image-url("dark_wall/dark_wall.png");
