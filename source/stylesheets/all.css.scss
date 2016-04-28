@@ -8,12 +8,13 @@
 /*****************
 Color Variables
 ******************/
-$primary-teal: #005757;
+$primary-teal: #065A8C;
 $light-teal: #2B8888;
 $primary-white: #cdcdcd;
 $primary-purple: #4F0A86;
 $light-purple: #B57DE2;
 $ut-orange: #C75B12;
+$primary-black: #333333;
 
 /*****************
 Responsive
@@ -154,11 +155,12 @@ ul.navbar-right a{
 Header
 ******************/
 #header{
-  background-image: image-url("kale.jpg");
-  // background-size: cover;
-  // background-position: center;
+  background-image: image-url("ocean.jpg");
   min-height:100vh;
-  // color: $primary-white;
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  background-attachment: fixed;
+  background-size: cover;
   text-align: center;
   position: relative;
 }
@@ -170,10 +172,10 @@ Header
     border-radius: 100%;
     padding: 1em;
     border: 4px solid transparentize(white, 0.1);
-    background-color: transparent;
+    background-color: transparentize(white, 0.8);
 
     &:hover{
-      background-color: transparentize(white, 0.8);
+      background-color: transparentize(white, 0.6);
     }
   }
   .textbg{
@@ -187,12 +189,16 @@ Header
 
   }
   .row{
+    object {
+      width: 50%;
+      margin-bottom: 2em;
+    }
     margin: auto 0;
   }
 }
 
 /*****************
-Traject
+Content
 ******************/
 .traject {
   padding-left: 4%;
@@ -204,7 +210,25 @@ Traject
   .traject-logo img {
     width: 100%;
   }
-
+  .title{
+    font-size: 2em;
+  }
+  .projImage{
+    background-color: $light-teal;
+    font-size: 5em;
+    // border-radius: 100%;
+    text-align: center;
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    i{
+      width: 100px;
+      height: 100px;
+    }
+    a, :hover{
+      color: $primary-white;
+    }
+  }
 }
 
 /*****************
