@@ -1,5 +1,5 @@
-//= require_tree .
 //= require jquery
+//= require_tree .
 //= require bootstrap-sprockets
 
 hljs.initHighlightingOnLoad();
@@ -123,4 +123,10 @@ $(window).scroll(function() {
   });
 });
 
-
+// parallax
+$('#header').parallax({
+  imageSrc: 'images/ocean.jpg',
+  speed: 0.85,
+  naturalWidth: 5760,
+  naturalHeight: 3840
+});
