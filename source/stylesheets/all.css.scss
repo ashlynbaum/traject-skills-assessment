@@ -8,8 +8,8 @@
 /*****************
 Color Variables
 ******************/
-$primary-teal: #065A8C;
-$light-teal: #2B8888;
+$primary-teal: #0C9A6A; //#88C9B3;
+$light-teal: #88C9B3; //#2B8888;
 $primary-white: #cdcdcd;
 $primary-purple: #4F0A86;
 $light-purple: #B57DE2;
@@ -173,6 +173,9 @@ Header
     display: flex;
     justify-content:center;
   }
+  .row {
+    margin: 0;
+  }
   .btn {
     border-radius: 100%;
     padding: 1em;
@@ -211,11 +214,43 @@ Header
 }
 
 /*****************
+story
+******************/
+.story-cartoon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .flat-img {
+    margin: 0 1em;
+    text-align: center;
+    object {
+      width: 180px;
+      margin: 0 2em;
+    }
+  }
+  .flat-img.network {
+    object {
+      width: 160px;
+      margin: 20px 10px 0 0;
+
+    }
+  }
+  .flat-img.cert {
+    object {
+      width: 130px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/*****************
 action
 ******************/
 #action {
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 /*****************
 Content
@@ -251,20 +286,20 @@ Content
   }
 }
 
-#action:before {
-  display: block;
-  // margin: 0 0 0 -470px;
-  position: absolute;
-  top: 1000px;
-  left: -15px;
-  border-top: 0 dashed transparent;
-  border-right: 0 dashed transparent;
-  border-left: 100vw dashed transparent;
-  border-bottom: 650px solid #d0d0d0;
-  content: '';
-  z-index: -1;
-  width: 100%;
-}
+// #action:before {
+//   display: block;
+//   // margin: 0 0 0 -470px;
+//   position: absolute;
+//   top: 1000px;
+//   left: -15px;
+//   border-top: 0 dashed transparent;
+//   border-right: 0 dashed transparent;
+//   border-left: 100vw dashed transparent;
+//   border-bottom: 650px solid #d0d0d0;
+//   content: '';
+//   z-index: -1;
+//   width: 100%;
+// }
 
 /*****************
 Current Projects
