@@ -5,7 +5,8 @@ tags: skills, assessment, talent
 ---
 
 
-I've been using the term "a rising tide raises all boats" quite a bit lately, and it's raised READMORE some eyebrows from people that wouldn't expect to hear me spouting trickle-down rhetoric. So, I'll be clear; I'm not advocating trickle-down economics. The tide I'm talking about is one of skilled people, and it's washing into the estuary of New Zealand's tech ecosystem. My point is simple, that more skilled people working in tech in this country will benefit the sector overall in the long run, regardless of which company they come here to work for initially.
+I've been using the term "a rising tide raises all boats" quite a bit lately, and it's raised some eyebrows READMORE from people that wouldn't expect to hear me spouting trickle-down rhetoric. So, I'll be clear; I'm not advocating trickle-down economics. The tide I'm talking about is one of skilled people, and it's washing into the estuary of New Zealand's tech ecosystem. My point is simple, that more skilled people working in tech in this country will benefit the sector overall in the long run, regardless of which company they come here to work for initially.
+
 ---
 <img src="/articles/rising-of-a-different-tide/rising-tide.gif" alt="Well, yeah, but nah. That's not what I mean this time." style="width: 100%"/>
 --- 
