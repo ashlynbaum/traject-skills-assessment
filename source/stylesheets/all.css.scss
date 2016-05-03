@@ -248,15 +248,15 @@ action
 ******************/
 
 #action-parallax {
-  background: image-url("angle-line.svg") no-repeat;
+  // background: image-url("angle-line.svg") no-repeat;
   padding: 2em;
   background-size: 100%;
   background-position-y: -250px;
 }
 #action {
   padding: 0;
-  // background-color: $light-grey;
-  background: image-url("worn_dots.png");
+  background-color: #F9F9F9;
+  // background: image-url("worn_dots.png");
   .action-selectors {
     display: flex;
     justify-content: center;
