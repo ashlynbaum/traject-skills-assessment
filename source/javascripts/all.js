@@ -131,12 +131,21 @@ $('#header').parallax({
   naturalHeight: 3840
 });
 
+// $('#action').parallax({
+//   imageSrc: 'images/angle-line.svg',
+//   speed: 0.9,
+//   naturalWidth: 900,
+//   naturalHeight: 900,
+//   zIndex: 1
+//   })
+
 // Show text on toggle button
 
 var toggleShow = function(buttons){
   for (var i = 0; i < buttons.length; i++) {
     var button = buttons[i];
     if (button.classList.contains("on")) {
+      button.classList.remove("hvr-grow");
       if (button.classList.contains("migrant")) {
         $('.migrant-text').removeClass('hidden')
         $('.accredited-text').addClass('hidden')
@@ -148,12 +157,8 @@ var toggleShow = function(buttons){
   }
 };
 
+// toggle accredited migrant buttons
 toggleShow($('.action'));
-// $(document).ready(
-//   $(".action").find("object").on("click", function(){
-//     debugger
-//   })
-// )
 $(window).load(function () {
   //alert("Document loaded, including graphics and embedded documents (like SVG)");
   var a = document.getElementById("migrant-img");
@@ -168,14 +173,16 @@ $(window).load(function () {
 $(".action.migrant").on("click", function(){
   if ( !(this.classList.contains("on")) ) {
     this.classList.add("on");
-    $(".action.accredited").removeClass("on")
+    $(".action.accredited").removeClass("on");
+    $(".action.accredited").addClass("hvr-grow");
     toggleShow($('.action'))
   }
 })
 $(".action.accredited").on("click", function(){
   if ( !(this.classList.contains("on")) ) {
     this.classList.add("on");
-    $(".action.migrant").removeClass("on")
+    $(".action.migrant").removeClass("on");
+    $(".action.migrant").addClass("hvr-grow");
     toggleShow($('.action'))
   }
 })

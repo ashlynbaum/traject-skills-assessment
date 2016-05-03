@@ -166,18 +166,8 @@ ul.navbar-right a{
 Header
 ******************/
 #header{
-  // background-image: image-url("ocean.jpg");
   min-height:100vh;
-  // background-repeat: no-repeat;
-  // background-position: 5% center;
-  // background-attachment: fixed;
-  // background-size: cover;
-  // text-align: center;
-  // position: relative;
   .nextbtn {
-    // position: absolute;
-    // bottom: 16%;
-    // left: unquote("calc(50% - 50px)");
     display: flex;
     justify-content:center;
   }
@@ -257,16 +247,23 @@ story
 action
 ******************/
 
-
+#action-parallax {
+  background: image-url("angle-line.svg") no-repeat;
+  padding: 2em;
+  background-size: 100%;
+  background-position-y: -250px;
+}
 #action {
-  background-color: $light-grey;
+  padding: 0;
+  // background-color: $light-grey;
+  background: image-url("worn_dots.png");
   .action-selectors {
     display: flex;
     justify-content: center;
   }
   .action {
     width: 180px;
-    margin: 10px;
+    margin: 20px;
     padding: 0;
     background-color: $primary-black;
     text-align: center;
@@ -290,6 +287,12 @@ action
         margin: 15px;
       }
     }
+  }
+  .action.on {
+    border-bottom: 5px solid $primary-teal;
+    // transform: scale(1.15);
+    background-color: #6F6D6D;
+    cursor: auto;
   }
   .action.migrant {
   }
@@ -405,7 +408,8 @@ Current Projects
 Blog
 ******************/
 #blog{
-  background-image: image-url('texres/texres.png');
+  background-image: image-url('footer_lodyas.png');
+  color: #989898;
   .row.page{
     text-align: center;
     color: $gray-light;
@@ -423,93 +427,26 @@ Blog
   }
 }
 
-/*****************
-Selected Works
-******************/
-#portfolio{
-  background-image: image-url('squares.png');
-  // background-image: image-url("multi-coloured-paint.jpg");
-  // background-size: cover;
-  // background-position: center;
-  text-align: center;
-  padding: 0;
-  .container-fluid{
-    background-color: transparentize(white, 0.2);
-    padding-top: 2em;
-    padding-bottom: 3em;
-  }
-  .items{
-    margin-top: 3%;
-  }
-}
-/*****************
-Education
-******************/
-#education{
-  background-image: image-url("light_noise_diagonal/light_noise_diagonal.png");
-  .list-skill{
-    margin: 8px 0 0 0;
-  }
-  a{
-    color: $ut-orange;
-  }
-}
-.utLogo{
-  max-width: 230px;
-  padding: 0;
-}
-
-.devLogo{
-  padding: 30px;
-}
-
-.utLogo, .devLogo{
-  display: block;
-}
-/*****************
-About
-******************/
-#about{
-  background-image: image-url("bicycle.png");
-  // background-size: cover;
-  // background-position: center;
-  text-align: left;
-  color: $primary-white;
-  padding: 0;
-  .row{
-    padding: 0 10px;
-  }
-  .about-text{
-    margin: 1em 0;
-  }
-  .container-fluid{
-    background-color: transparentize(#2B8888, 0.2);
-    padding-top: 2em;
-    padding-bottom: 3em;
-  }
-  a{
-    color: $light-purple;
-  }
-}
-
 
 
 /*****************
 Contact
 ******************/
 #contact{
-  background-image: image-url("ginger_tea.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: image-url("geometry2.png");
+  // background-size: cover;
+  // background-position: center;
+  background-repeat: true;
+  background-position: 0;
   .container-fluid{
-    background-color: transparentize(white, 0.3);
+    // background-color: transparentize(white, 0.5);
     padding-bottom: 2em;
   }
   .row{
     padding: 2em auto;
   }
   img{
-    width: 220px;
+    width: 300px;
   }
 }
 
@@ -527,7 +464,7 @@ footer
   text-align: center;
   padding: 0;
   .row{
-    padding: 5px 0;
+    padding: .5em 0;
   }
   p{
     margin-bottom: 0px;
