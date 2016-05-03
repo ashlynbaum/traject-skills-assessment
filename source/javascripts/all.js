@@ -130,3 +130,52 @@ $('#header').parallax({
   naturalWidth: 5760,
   naturalHeight: 3840
 });
+
+// Show text on toggle button
+
+var toggleShow = function(buttons){
+  for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+    if (button.classList.contains("on")) {
+      if (button.classList.contains("migrant")) {
+        $('.migrant-text').removeClass('hidden')
+        $('.accredited-text').addClass('hidden')
+      } else {
+        $('.accredited-text').removeClass('hidden')
+        $('.migrant-text').addClass('hidden')
+      }
+    }
+  }
+};
+
+toggleShow($('.action'));
+// $(document).ready(
+//   $(".action").find("object").on("click", function(){
+//     debugger
+//   })
+// )
+$(window).load(function () {
+  //alert("Document loaded, including graphics and embedded documents (like SVG)");
+  var a = document.getElementById("migrant-img");
+  var b = document.getElementById("accredited-img")
+  var svgDocA = a.contentDocument; //get the inner DOM of user.svg
+  var svgDocB = b.contentDocument;
+  var clickA = svgDocA.getElementById("Layer_1"); //get the inner element by id
+  var clickb = svgDocB.getElementById("Layer_1"); //get the inner element by id
+  clickA.addEventListener("mousedown",function(){$(".action.migrant").trigger('click')},false);
+  clickb.addEventListener("mousedown",function(){$(".action.accredited").trigger('click')},false);
+});
+$(".action.migrant").on("click", function(){
+  if ( !(this.classList.contains("on")) ) {
+    this.classList.add("on");
+    $(".action.accredited").removeClass("on")
+    toggleShow($('.action'))
+  }
+})
+$(".action.accredited").on("click", function(){
+  if ( !(this.classList.contains("on")) ) {
+    this.classList.add("on");
+    $(".action.migrant").removeClass("on")
+    toggleShow($('.action'))
+  }
+})
