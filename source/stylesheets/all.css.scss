@@ -214,6 +214,11 @@ Header
 /*****************
 story
 ******************/
+.story-text {
+  width: 700px;
+  text-align: center;
+  margin: 0 auto;
+}
 .story-cartoon {
   display: flex;
   justify-content: center;
@@ -223,7 +228,7 @@ story
     margin: 0 1em;
     text-align: center;
     object {
-      width: 180px;
+      width: 160px;
       margin: 0 2em;
     }
   }
@@ -237,7 +242,7 @@ story
   .flat-img.cert {
     object {
       width: 130px;
-      margin-top: 40px;
+      margin-top: 20px;
       margin-bottom: 10px;
     }
   }
