@@ -125,7 +125,7 @@ $(window).scroll(function() {
 
 // parallax
 $('#header').parallax({
-  imageSrc: 'images/ocean.jpg',
+  imageSrc: 'images/ocean-teal-1.jpg',
   speed: 0.85,
   naturalWidth: 5760,
   naturalHeight: 3840
