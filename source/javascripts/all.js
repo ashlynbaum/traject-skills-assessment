@@ -1,5 +1,5 @@
-//= require_tree .
 //= require jquery
+//= require_tree .
 //= require bootstrap-sprockets
 
 hljs.initHighlightingOnLoad();
@@ -122,3 +122,67 @@ $(window).scroll(function() {
     }
   });
 });
+
+// parallax
+$('#header').parallax({
+  imageSrc: 'images/ocean.jpg',
+  speed: 0.85,
+  naturalWidth: 5760,
+  naturalHeight: 3840
+});
+
+// $('#action').parallax({
+//   imageSrc: 'images/angle-line.svg',
+//   speed: 0.9,
+//   naturalWidth: 900,
+//   naturalHeight: 900,
+//   zIndex: 1
+//   })
+
+// Show text on toggle button
+
+var toggleShow = function(buttons){
+  for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+    if (button.classList.contains("on")) {
+      button.classList.remove("hvr-grow");
+      if (button.classList.contains("migrant")) {
+        $('.migrant-text').removeClass('hidden')
+        $('.accredited-text').addClass('hidden')
+      } else {
+        $('.accredited-text').removeClass('hidden')
+        $('.migrant-text').addClass('hidden')
+      }
+    }
+  }
+};
+
+// toggle accredited migrant buttons
+toggleShow($('.action'));
+$(window).load(function () {
+  //alert("Document loaded, including graphics and embedded documents (like SVG)");
+  var a = document.getElementById("migrant-img");
+  var b = document.getElementById("accredited-img")
+  var svgDocA = a.contentDocument; //get the inner DOM of user.svg
+  var svgDocB = b.contentDocument;
+  var clickA = svgDocA.getElementById("Layer_1"); //get the inner element by id
+  var clickb = svgDocB.getElementById("Layer_1"); //get the inner element by id
+  clickA.addEventListener("mousedown",function(){$(".action.migrant").trigger('click')},false);
+  clickb.addEventListener("mousedown",function(){$(".action.accredited").trigger('click')},false);
+});
+$(".action.migrant").on("click", function(){
+  if ( !(this.classList.contains("on")) ) {
+    this.classList.add("on");
+    $(".action.accredited").removeClass("on");
+    $(".action.accredited").addClass("hvr-grow");
+    toggleShow($('.action'))
+  }
+})
+$(".action.accredited").on("click", function(){
+  if ( !(this.classList.contains("on")) ) {
+    this.classList.add("on");
+    $(".action.migrant").removeClass("on");
+    $(".action.migrant").addClass("hvr-grow");
+    toggleShow($('.action'))
+  }
+})
