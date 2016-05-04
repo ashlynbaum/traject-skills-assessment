@@ -61,7 +61,7 @@ set :markdown_engine, :redcarpet
 
 #Google Analytics
 activate :google_analytics do |ga|
-  ga.tracking_id = 'UA-63369789-1' # Replace with your property ID.
+  ga.tracking_id = 'UA-63369789-2' # Replace with your property ID.
 end
 
 # Build-specific configuration
