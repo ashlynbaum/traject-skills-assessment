@@ -6,20 +6,37 @@ $light-white: #F4F4F4;
   p{
     font-size: 18px;
   }
+
   #header{
+    background: image-url("footer_lodyas.png");
     min-height: 0;
     text-align: left;
+    object {
+      width: 400px;
+    }
   }
+
   .jumbotron{
     padding: 3em 0 1em 0;
   }
+
   #header h1{
     font-size: 4em;
+    position: fixed;
+    left: -99999999999px;
   }
+
   #header h2{
     font-size: 2em;
     margin-top: 0;
+    position: fixed;
+    left: -99999999999px;
   }
+
+  #header .row{
+    text-align: center;
+  }
+
   #main{
     margin: 2em auto;
     max-width: 1000px;

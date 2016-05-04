@@ -6,7 +6,7 @@
     <meta name="viewport" content="initial-scale=1">
 
 
-    <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <title>Traject<%= ' - ' + current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 
     <%= stylesheet_link_tag "normalize", "all", "blog", "github" %>
@@ -51,8 +51,9 @@
       <div class="jumbotron">
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1">
-            <h1>Ashlyn Baum</h1>
-            <h2>Professional Problem Solver</h2>
+            <object data="/images/Traject-logos/traject-logo-wtag-white-02.svg" type="image/svg+xml"></object>
+            <h1>Traject</h1>
+            <h2>growing the knowledge economy</h2>
           </div>
         </div>
       </div>
