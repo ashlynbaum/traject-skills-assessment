@@ -63,6 +63,9 @@ Responsive
       padding-top: 2em;
     }
   }
+  #action-parallax {
+    padding: 2em;
+  }
 }
 @media screen and (max-width: 768px) {
   body{
@@ -107,6 +110,9 @@ Responsive
   }
   .story-cartoon .arrows {
     display: none;
+  }
+  #action-parallax {
+    padding: 2em 0;
   }
 }
 /*****************
@@ -218,7 +224,7 @@ Header
 story
 ******************/
 .story-text {
-  width: 700px;
+  min-width: 700px;
   text-align: center;
   margin: 0 auto;
 }
@@ -256,8 +262,6 @@ action
 ******************/
 
 #action-parallax {
-  // background: image-url("angle-line.svg") no-repeat;
-  padding: 2em;
   background-size: 100%;
   background-position-y: -250px;
 }
