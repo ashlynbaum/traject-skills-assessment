@@ -268,14 +268,16 @@ action
   .action-selectors {
     display: flex;
     justify-content: center;
+    width: 80%;
+    margin: 0 auto;
   }
   .action {
-    width: 180px;
-    margin: 20px;
+    width: 50%;
     padding: 0;
     background-color: $primary-black;
     text-align: center;
     border-bottom: #696969 5px solid;
+    z-index: 1;
     &:hover, svg:hover{
       cursor: pointer;
       border-bottom: none;
@@ -301,6 +303,7 @@ action
     // transform: scale(1.15);
     background-color: #6F6D6D;
     cursor: auto;
+    z-index: 0;
   }
   .action.migrant {
   }
