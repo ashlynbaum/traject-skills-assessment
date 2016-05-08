@@ -146,6 +146,7 @@ var toggleShow = function(buttons){
     var button = buttons[i];
     if (button.classList.contains("on")) {
       button.classList.remove("hvr-grow");
+      button.classList.remove("hvr-underline-reveal");
       if (button.classList.contains("migrant")) {
         $('.migrant-text').removeClass('hidden')
         $('.accredited-text').addClass('hidden')
@@ -159,8 +160,8 @@ var toggleShow = function(buttons){
 
 // toggle accredited migrant buttons
 toggleShow($('.action'));
+// make svg image clickable
 $(window).load(function () {
-  //alert("Document loaded, including graphics and embedded documents (like SVG)");
   var a = document.getElementById("migrant-img");
   var b = document.getElementById("accredited-img")
   var svgDocA = a.contentDocument; //get the inner DOM of user.svg
@@ -174,7 +175,7 @@ $(".action.migrant").on("click", function(){
   if ( !(this.classList.contains("on")) ) {
     this.classList.add("on");
     $(".action.accredited").removeClass("on");
-    $(".action.accredited").addClass("hvr-grow");
+    $(".action.accredited").addClass("hvr-grow").addClass("hvr-underline-reveal");
     toggleShow($('.action'))
   }
 })
@@ -182,7 +183,7 @@ $(".action.accredited").on("click", function(){
   if ( !(this.classList.contains("on")) ) {
     this.classList.add("on");
     $(".action.migrant").removeClass("on");
-    $(".action.migrant").addClass("hvr-grow");
+    $(".action.migrant").addClass("hvr-grow").addClass("hvr-underline-reveal");
     toggleShow($('.action'))
   }
 })
