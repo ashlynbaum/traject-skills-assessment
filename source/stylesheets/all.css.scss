@@ -245,7 +245,7 @@ Header
   min-height:100vh;
   .nextbtn {
     display: flex;
-    justify-content:center;
+    justify-content: center;
   }
   .row {
     margin: 0;
@@ -297,6 +297,8 @@ story
 ******************/
 #story {
   padding-bottom: 7%;
+  background-image: image-url('footer_lodyas.png');
+  color: $primary-white;
 }
 
 .story-cartoon {
@@ -422,18 +424,6 @@ action
   }
 }
 
-// .email-submit {
-//   input:not(.btn){
-//     color: black;
-//     border-bottom: 1px solid;
-//   }
-// }
-
-
-
-/*****************
-Content
-******************/
 .traject {
   padding-left: 4%;
   padding-right: 4%;
@@ -465,49 +455,85 @@ Content
   }
 }
 
-// #action:before {
-//   display: block;
-//   // margin: 0 0 0 -470px;
-//   position: absolute;
-//   top: 1000px;
-//   left: -15px;
-//   border-top: 0 dashed transparent;
-//   border-right: 0 dashed transparent;
-//   border-left: 100vw dashed transparent;
-//   border-bottom: 650px solid #d0d0d0;
-//   content: '';
-//   z-index: -1;
-//   width: 100%;
-// }
-
-/*****************
-Current Projects
-******************/
-.projects{
-  padding-left: 4%;
-  padding-right: 4%;
-  background-image: image-url("dark_wall/dark_wall.png");
-  color: $primary-white;
-  .title{
-    font-size: 2em;
-  }
-  .projImage{
-    background-color: $light-teal;
-    font-size: 5em;
-    // border-radius: 100%;
-    text-align: center;
-    border-radius: 100%;
-    width: 130px;
-    height: 130px;
-    i{
-      width: 100px;
-      height: 100px;
+.migrant-info {
+  i {
+    color: $primary-teal;
+    padding-right: 10px;
+    &.fa-check-squares-o {
+      font-size: 1.5em;
+      position: relative;
+      top: 5px;
     }
-    a, :hover{
-      color: $primary-white;
+    &.fa-circle{
+      font-size: .5em;
+      position: relative;
+      top: -3px;
     }
   }
 }
+
+.info-text {
+  max-width: 710px;
+  margin: 0 0 0 3em;
+}
+
+.migrant-work-list li {
+  display: -webkit-inline-box;
+  .flat-icon {
+    position: relative;
+    top: 20px;
+  }
+  h4{
+    align-self: center;
+    font-size: 23px;
+    padding: 10px;
+    }
+}
+
+.flat-icon {
+  border-radius: 50%;
+  padding: 7px 17px;
+  font-size: 45px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 100%;
+  overflow: hidden;
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+.pint {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  object {
+    max-width: 130px;
+    margin-right: 4em;
+  }
+  h4 {
+    margin: 0 2em;
+    font-size: 1.5em
+  }
+}
+
+.occupation {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3em;
+  margin-left: 3em;
+  object {
+    max-width: 220px;
+    margin-right: 3em;
+  }
+  ul {
+    font-size: 23px;
+    margin-top: 20px;
+  }
+}
+.info-text.occupation {
+  align-items: flex-start;
+}
+
+
 
 /*****************
 Blog

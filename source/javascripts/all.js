@@ -1,13 +1,18 @@
 //= require jquery
 //= require_tree .
+//= require jquery.flatshadow.min
 //= require bootstrap-sprockets
 
 hljs.initHighlightingOnLoad();
 
-// carousel
-$('.carousel').carousel({
-  interval: 15000
+$(".flat-icon").flatshadow({
+  color: "#2bbbad", // Background color of elements inside. (Color will be random if left unassigned)
+  angle: "SE", // Shadows direction. Available options: N, NE, E, SE, S, SW, W and NW. (Angle will be random if left unassigned)
+  fade: false, // Gradient shadow effect
+  // boxShadow: "#d7cfb9" // Color of the Container's shadow
 });
+
+
 // Highlight navbar elements on page
 $('body').scrollspy({ target: '#myScrollspy', offset: 50 });
 
