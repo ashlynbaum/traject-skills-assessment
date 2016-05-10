@@ -3,13 +3,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "hover";
+@import "components/color";
+@import "components/variables";
+@import "components/buttons";
+@import "components/waves";
+@import "components/global";
+@import "components/typography";
+@import "components/forms/*";
+@import "components/grid.scss";
+// @import "components/**/*";
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700|Open+Sans+Condensed:300,700);
 
 /*****************
 Color Variables
 ******************/
-$primary-teal: #16a085; //#88C9B3;
+$primary-teal: #2bbbad; //#16a085; //#88C9B3;
 $light-teal: #1abd9d; //#2B8888;
 $teal: #51B7A6;
 $primary-blue: #2980b9;
@@ -24,7 +33,7 @@ $primary-black: #333333;
 /*****************
 Responsive
 ******************/
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .v-align{
     display: flex;
     align-items: center;
@@ -40,6 +49,9 @@ Responsive
     }
     h2{
       font-size: 3em;
+    }
+    h3 {
+      font-size: 2em;
     }
   }
   .heading h2{
@@ -63,8 +75,57 @@ Responsive
       padding-top: 2em;
     }
   }
+  #action-parallax {
+    padding: 2em;
+  }
+
+  .migrant-email {
+    margin-bottom: 130px;
+    padding: 0 1em 0 0;
+  }
+
+  .request {
+    margin-top: -0.5em;
+    padding: 0 0.7em;
+    i {
+      position: relative;
+      font-size: 2.5em;
+      top: 43px;
+      margin-right: 20px;
+      color: $primary-teal;
+    }
+  }
+  .email-submit {
+    position: relative;
+    left: 4em;
+  }
+  .story-text {
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .info-text {
+    max-width: 710px;
+    margin: 2em 0 2em 3em;
+  }
+  .action-selectors {
+    width: 80%;
+  }
+  .assessment-panel {
+    width: 80%;
+    .content {
+      padding: 1.5em 5em 4em 5em;
+    }
+  }
+  .occupation {
+    margin-left: 3em;
+    object {
+      margin-right: 3em;
+    }
+  }
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 767px) {
   body{
     p{
       font-size: 14px;
@@ -75,6 +136,9 @@ Responsive
   }
   #blog h3{
     font-size: 18px;
+  }
+  h3 {
+    font-size: 1.5em;
   }
   #contact{
     text-align: center;
@@ -108,18 +172,31 @@ Responsive
   .story-cartoon .arrows {
     display: none;
   }
+  .action-selectors {
+    width: 100%;
+  }
+  #action-parallax {
+    padding: 0;
+  }
+  .assessment-panel {
+    width: 100%;
+    .content {
+      padding: 0 1em;
+    }
+  }
+  .occupation {
+    object {
+      margin: 0 auto;
+    }
+  }
 }
+
 /*****************
 General
 ******************/
 body{
   position: relative;
   font-family: 'Open Sans', Arial, sans-serif;
-
-  h4{
-    font-size: 20px;
-    margin-top: 1em;
-  }
 }
 
 section{
@@ -128,7 +205,14 @@ section{
   font-size: 18px;
 }
 
-a:not(.carousel-control):not(.btn-primary){
+h4 {
+  line-height: 1.4;
+}
+
+strong {
+  font-weight: bold;
+}
+a:not(.carousel-control):not(.btn-circle){
   color: $primary-teal;
   &:hover{
     color: $light-teal;
@@ -137,6 +221,26 @@ a:not(.carousel-control):not(.btn-primary){
 
 .italic {
   font-style: italic;
+}
+
+.emph{
+  border-bottom: 3px solid $primary-teal;
+}
+.underline-dashed {
+  border-bottom: 3px dashed $primary-teal;
+}
+
+.right-quote {
+  text-align: right;
+  border-right: 5px solid teal;
+  padding-right: 35px;
+}
+
+.left-quote {
+  text-align: left;
+  border-left: 5px solid teal;
+  padding-left: 45px;
+  width: 95%;
 }
 
 .heading{
@@ -148,6 +252,10 @@ a:not(.carousel-control):not(.btn-primary){
     border-top: 4px solid $primary-teal;
     display: inline-block;
   }
+}
+
+input[type=text],  input[type=email] {
+  border-bottom: 1px solid #ccc;
 }
 
 /*****************
@@ -165,6 +273,7 @@ ul.navbar-right a{
 .navbar-brand{
   padding: 3px 6px 3px 15px;
 }
+
 /*****************
 Header
 ******************/
@@ -172,16 +281,21 @@ Header
   min-height:100vh;
   .nextbtn {
     display: flex;
-    justify-content:center;
+    justify-content: center;
   }
   .row {
     margin: 0;
   }
-  .btn {
+  .btn-circle {
     border-radius: 100%;
     padding: 1em;
     border: 4px solid transparentize(white, 0.1);
     background-color: transparentize(white, 0.8);
+    padding: 37px 15px 19px 15px;
+    color: white;
+    i {
+      padding: 10px 0;
+    }
     &:hover{
     background-color: transparentize(white, 0.6);
     }
@@ -217,16 +331,24 @@ Header
 /*****************
 story
 ******************/
-.story-text {
-  width: 700px;
-  text-align: center;
-  margin: 0 auto;
+#story {
+  padding-bottom: 7%;
+  background-image: image-url('footer_lodyas.png');
+  color: $primary-white;
 }
+
 .story-cartoon {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  h3 {
+    font-size: 1.8em;
+    color: #88C9B3;
+  }
+  i {
+    color: #88C9B3;
+  }
   .flat-img {
     margin: 0 1em;
     text-align: center;
@@ -256,8 +378,6 @@ action
 ******************/
 
 #action-parallax {
-  // background: image-url("angle-line.svg") no-repeat;
-  padding: 2em;
   background-size: 100%;
   background-position-y: -250px;
 }
@@ -268,14 +388,22 @@ action
   .action-selectors {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+  }
+  .heading{
+    margin: 1em auto 3em auto;
+    h3 {
+      font-size: 1.8em;
+      margin-bottom: 1.5em;
+    }
   }
   .action {
-    width: 180px;
-    margin: 20px;
+    width: 50%;
     padding: 0;
     background-color: $primary-black;
     text-align: center;
-    border-bottom: #696969 5px solid;
+    border-bottom: 5px solid darken($primary-teal, 5%);
+    z-index: 1;
     &:hover, svg:hover{
       cursor: pointer;
       border-bottom: none;
@@ -297,16 +425,16 @@ action
     }
   }
   .action.on {
-    border-bottom: 5px solid $primary-teal;
+    border-bottom: none;
+    border-top: 5px solid darken($primary-teal, 5%);
+    border-left: 5px solid darken($primary-teal, 5%);
+    border-right: 5px solid darken($primary-teal, 5%);
     // transform: scale(1.15);
-    background-color: #6F6D6D;
+    background-color: $primary-teal;
     cursor: auto;
+    z-index: 0;
   }
-  .action.migrant {
-  }
-  .action.accredited {
 
-  }
   .action-desc{
     // background-color: $light-teal;
     color: $primary-white;
@@ -316,31 +444,24 @@ action
 }
 
 .assessment-panel {
-  width: 80%;
-  margin: 2em auto;
+  margin: 0 auto 2em auto;
   // padding: 0 2em 2em 2em;
   background-color: $primary-white;
   border-bottom: 5px solid #A8A8A8;
   // border-bottom: 3px solid #A8A8A8;
   .title {
+    min-height: 3em;
     width: 100%;
+    border-left: 5px solid darken($primary-teal, 5%);
+    border-right: 5px solid darken($primary-teal, 5%);
     background-color: $primary-teal;
     color: $primary-white;
     padding: .5em;
     text-align: center;
   }
-  .content {
-    padding: 2em;
-  }
+
 }
 
-.prototype-heading{
-  
-}
-
-/*****************
-Content
-******************/
 .traject {
   padding-left: 4%;
   padding-right: 4%;
@@ -372,50 +493,111 @@ Content
   }
 }
 
-// #action:before {
-//   display: block;
-//   // margin: 0 0 0 -470px;
-//   position: absolute;
-//   top: 1000px;
-//   left: -15px;
-//   border-top: 0 dashed transparent;
-//   border-right: 0 dashed transparent;
-//   border-left: 100vw dashed transparent;
-//   border-bottom: 650px solid #d0d0d0;
-//   content: '';
-//   z-index: -1;
-//   width: 100%;
-// }
-
-/*****************
-Current Projects
-******************/
-.projects{
-  padding-left: 4%;
-  padding-right: 4%;
-  background-image: image-url("dark_wall/dark_wall.png");
-  color: $primary-white;
-  .title{
-    font-size: 2em;
-  }
-  .projImage{
-    background-color: $light-teal;
-    font-size: 5em;
-    // border-radius: 100%;
-    text-align: center;
-    border-radius: 100%;
-    width: 130px;
-    height: 130px;
-    i{
-      width: 100px;
-      height: 100px;
+.migrant-info {
+  i {
+    color: $primary-teal;
+    padding-right: 10px;
+    &.fa-check-squares-o {
+      font-size: 1.5em;
+      position: relative;
+      top: 5px;
     }
-    a, :hover{
-      color: $primary-white;
+    &.fa-circle{
+      font-size: .5em;
+      position: relative;
+      top: -3px;
+    }
+    &.fa-hand-o-right {
+      padding-right: 30px;
     }
   }
 }
 
+
+
+.migrant-work-list li {
+  display: -webkit-inline-box;
+  .flat-icon {
+    position: relative;
+    top: 20px;
+  }
+  h4{
+    align-self: center;
+    font-size: 23px;
+    padding: 10px;
+    }
+}
+
+.flat-icon {
+  border-radius: 50%;
+  padding: 7px 17px;
+  font-size: 45px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 100%;
+  overflow: hidden;
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+.pint {
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: center;
+  margin-bottom: 1em;
+  object {
+    max-width: 130px;
+    // margin-right: 4em;
+  }
+  h4 {
+    margin: 0 2em;
+    font-size: 1.5em
+  }
+  .left-quote {
+    width: none;
+  }
+  .beer-wrapper {
+    text-align: center;
+  }
+}
+
+.occupation {
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: center;
+  margin-bottom: 3em;
+  margin-top: 2em;
+  object {
+    max-width: 220px;
+  }
+  ul {
+    font-size: 23px;
+    margin-top: 20px;
+  }
+}
+.beer-wrapper {
+  text-align: center;
+}
+
+.info-text.occupation {
+  align-items: flex-start;
+}
+
+/*****************
+Assessors
+******************/
+.assessor-description-object {
+  text-align: center;
+  padding-top: 2em;
+}
+#network-img {
+  max-width: 170px;
+}
+
+.accredited-text {
+  i {
+    color: $primary-teal;
+  }
+}
 /*****************
 Blog
 ******************/
@@ -483,6 +665,33 @@ footer
   }
   .row i{
     margin:auto 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #action .heading {
+    margin: 0;
+  }
+  .assessment-panel {
+    margin: 0;
+    padding-bottom: 2em;
+  }
+  .occupation {
+    margin: 2em 0 0 0;
+  }
+  .info-text.occupation {
+    margin: 0;
+    i {
+      display: none;
+    }
+  }
+  .migrant-work-list li h4 {
+    padding: 0;
+    flex-grow: 1;
+    display: inline-block;
+  }
+  .pint object {
+    margin: 1em auto;
   }
 }
 
