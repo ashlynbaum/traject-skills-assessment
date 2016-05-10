@@ -83,12 +83,10 @@ configure :build do
   #
   activate :favicon_maker, :icons => {
     "_favicon_template.png" => [
-      { icon: "apple-touch-icon-152x152-precomposed.png" },
-      { icon: "apple-touch-icon-114x114-precomposed.png" },
-      { icon: "apple-touch-icon-72x72-precomposed.png" },
-      { icon: "favicon-196x196.png" },
+      { icon: "favicon-45x45.png", size: "45x45" },
+      { icon: "favicon-32x32.png", size: "32x32" },
       { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
-      { icon: "favicon.png", size: "16x16" },
+      { icon: "favicon-16x16.png", size: "16x16" },
     ]
   }
 end
