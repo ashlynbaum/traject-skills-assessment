@@ -8,7 +8,7 @@ hljs.initHighlightingOnLoad();
 $(".flat-icon").flatshadow({
   color: "#2bbbad", // Background color of elements inside. (Color will be random if left unassigned)
   angle: "SE", // Shadows direction. Available options: N, NE, E, SE, S, SW, W and NW. (Angle will be random if left unassigned)
-  fade: false, // Gradient shadow effect
+  fade: true, // Gradient shadow effect
   // boxShadow: "#d7cfb9" // Color of the Container's shadow
 });
 
@@ -166,16 +166,16 @@ var toggleShow = function(buttons){
 // toggle accredited migrant buttons
 toggleShow($('.action'));
 // make svg image clickable
-$(window).load(function () {
-  var a = document.getElementById("migrant-img");
-  var b = document.getElementById("accredited-img")
-  var svgDocA = a.contentDocument; //get the inner DOM of user.svg
-  var svgDocB = b.contentDocument;
-  var clickA = svgDocA.getElementById("Layer_1"); //get the inner element by id
-  var clickb = svgDocB.getElementById("Layer_1"); //get the inner element by id
-  clickA.addEventListener("mousedown",function(){$(".action.migrant").trigger('click')},false);
-  clickb.addEventListener("mousedown",function(){$(".action.accredited").trigger('click')},false);
-});
+// $(window).load(function () {
+//   var a = document.getElementById("migrant-img");
+//   var b = document.getElementById("accredited-img")
+//   var svgDocA = a.contentDocument; //get the inner DOM of user.svg
+//   var svgDocB = b.contentDocument;
+//   var clickA = svgDocA.getElementById("Layer_1"); //get the inner element by id
+//   var clickb = svgDocB.getElementById("Layer_1"); //get the inner element by id
+//   clickA.addEventListener("mousedown",function(){$(".action.migrant").trigger('click')},false);
+//   clickb.addEventListener("mousedown",function(){$(".action.accredited").trigger('click')},false);
+// });
 $(".action.migrant").on("click", function(){
   if ( !(this.classList.contains("on")) ) {
     this.classList.add("on");
