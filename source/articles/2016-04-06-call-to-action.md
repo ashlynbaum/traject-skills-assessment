@@ -4,7 +4,7 @@ date:   2016-04-06 15:00 NZST
 tags: Business Validation
 ---
 
-Right now we are looking for highly skilled people in the IT sector who want to immigrate to New Zealand. READMORE If this sounds like you: [let us know](http://www.traject.nz/work-in-new-zealand). We want skilled people without formal qualifications to get involved in Traject's pilot program.
+Right now we are looking for highly skilled people in the IT sector who want to immigrate to New Zealand. READMORE If this sounds like you: [let us know](http://www.traject.nz/). We want skilled people without formal qualifications to get involved in Traject's pilot program.
 
 ## What we're doing
 Traject is currently in the process of validating, and iterating on, a skills assessment service to qualify skilled individuals, in the IT sector, for the Skilled Migrant Category (SMC) visa. Currently, if you are trying to move to New Zealand (or you're already here on a non-residency visa), you have a job offer, but no tertiary education or provable 5 years of employment, you will not qualify for an SMC visa. We want to change that; we want to help skilled individuals get a visa and residency as quickly as possible. 
@@ -16,4 +16,4 @@ To assess if an individual qualifies to work in a field on the Long Term Skills 
 
 A [survey](https://www.absoluteit.co.nz/2016/03/experience-outsmarts-university-degree/) of IT companies in New Zealand found that 68% of companies prefer hands-on experience and industry training over a university degree. Assessing individuals based on their skills is currently how the industry hires talent, and this is how immigration should address talent in the tech sector as well. 
 
-Immigration New Zealand is simply not equipped to assess skills in this way. That's why we're here. Please, if this sounds like something you or someone you know might benefit from, [hit the link](www.traject.nz/work-in-new-zealand). 
+Immigration New Zealand is simply not equipped to assess skills in this way. That's why we're here. Please, if this sounds like something you or someone you know might benefit from, [hit the link](www.traject.nz/). 
