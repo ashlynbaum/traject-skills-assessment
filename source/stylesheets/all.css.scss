@@ -97,7 +97,7 @@ Responsive
   }
   .email-submit {
     position: relative;
-    left: 4em;
+    left: 1em;
   }
   .story-text {
     max-width: 80%;
@@ -580,6 +580,12 @@ action
 
 .info-text.occupation {
   align-items: flex-start;
+}
+
+.request {
+  h3 {
+    color: #26A69A;
+  }
 }
 
 /*****************
