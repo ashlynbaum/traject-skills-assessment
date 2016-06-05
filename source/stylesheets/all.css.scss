@@ -283,6 +283,12 @@ Header
     display: flex;
     justify-content: center;
   }
+  .container {
+    margin-bottom: 0;
+  }
+  h2,h3 {
+    text-align: center;
+  }
   .row {
     margin: 0;
   }
