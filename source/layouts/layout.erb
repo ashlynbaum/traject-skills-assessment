@@ -58,59 +58,13 @@
       </nav>
 
     <!-- Jumbotron -->
-    <section id="header">
-      <div class="jumbotron">
-        <div class="textbg">
-          <div class="row">
-            <!-- <div class="col-xs-12 col-md-6">
-              <div class="logo">
-                <object data="images/logos/traject-logo-wtag-white-01.svg" type="image/svg+xml"></object>
-              </div>
-            </div> -->
-            <div class="container">
-              <h2>Growing the knowledge Economy</h2>
-              <h3>Bridging the gap between the kind of skills our IT sector needs, and New Zealand’s current Immigration policy. </h3>
+    <%= partial 'header' %>
 
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <!-- <h2>Growing the knowledge economy</h2> -->
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="row nextbtn">
-        <p><a class="btn-circle" href="#story" role="button"><i class="fa fa-chevron-down fa-3x"></i></a></p>
-      </div>
-    </section>
+    <!-- Intro -->
+    <%= partial 'intro' %>
 
 
-    <!-- Traject -->
-    <section id="description">
-      <div class="container-fluid">
-        <div class="row heading">
-          <h2>Get Skills Recognized</h2>
-          <div class="underline"></div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <h4>We’re making it possible for <span class="underline-dashed">migrants</span> who have skills, but no tertiary education, to become New Zealand <span class="underline-dashed">residents.</span> </h4>
-            <div class="col-md-4">
-              <h4>Self Taught and Self Employed</h4>
-            </div>
-            <div class="col-md-8">
-
-              <p>Traditionally, to get a Skilled Migrant Category Visa to work in the Technology Sector, you either need a bachelors degree in your field or five provable years of work experience.</p>
-              <p>Those self taught, and cannot prove work experence have difficulty qualifying for their visa.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      </div>
-    </section>
+<!-- story -->
     <section id="story" class="projects">
       <div class="container-fluid">
         <div class="row heading">
@@ -416,6 +370,8 @@
   <%= javascript_include_tag  "all" %>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
 
 </html>
