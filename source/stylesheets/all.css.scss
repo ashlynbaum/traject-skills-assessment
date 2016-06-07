@@ -353,11 +353,14 @@ story
   }
   .intro-subtext {
     margin-top: 1em;
+    font-size: 22px;
   }
   .question {
-    border: 6px solid teal;
-    padding: 5px 15px;
+    // border: 6px solid teal;
+    // padding: 5px 15px;
     opacity: 0;
+    font-size: 26px;
+    color: teal;
   }
 }
 

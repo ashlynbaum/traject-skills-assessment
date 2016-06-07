@@ -247,6 +247,26 @@ var scene = new ScrollMagic.Scene({
       .insert(question,8)
     )
     .setPin("#pin") // pins the element for the the scene's duration
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller); // assign the scene to the controller
 
+// Animation for story scene
+var controllerStory = new ScrollMagic.Controller();
+
+var tweenOne = TweenMax.staggerFromTo(".img", 2,
+  {opacity:0},
+  {className:"+=bounceIn", ease: Back.easeOut},
+  2
+  );
+
+
+var sceneStory = new ScrollMagic.Scene({
+        triggerElement: "#story",
+        duration: 300,    // the scene should last for a scroll distance of 100px
+        // offset: 150,
+        pushFollowers: false
+    })
+    .setTween(tweenOne)
+    // .setPin(".story-cartoon") // pins the element for the the scene's duration
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controllerStory); // assign the scene to the controller
