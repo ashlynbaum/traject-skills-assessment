@@ -192,3 +192,61 @@ $(".action.accredited").on("click", function(){
     toggleShow($('.action'))
   }
 })
+
+// Animation for info section using scrollMagic
+var controller = new ScrollMagic.Controller({
+  globalSceneOptions: {
+    triggerHook: 'onLeave'
+  }
+});
+
+
+// Animation for intro.erb
+var timeline = new TimelineLite();
+
+var brain = TweenMax.fromTo("#brain", 1.5,
+                // {left: -100},
+                // {left: 100, repeat: -1, yoyo: true, ease: Circ.easeInOut},
+                {width:0, top:200, left:150}, {width:300, top:0, left:10}
+              );
+var squiggles = TweenMax.fromTo("#squiggles", 2,
+                {width:0, top:200, left:150},
+                {width:300, top:0, left:10}
+                );
+
+var banner = TweenMax.fromTo("#banner", 2,
+                  {width:0, top:100, left: 150},
+                  {width:300, top:0, left: 10}
+                );
+
+var question = TweenMax.to(".question", 1,
+                  {className: "+=fadeInRight"}
+                );
+
+var subtext = TweenMax.fromTo(".intro-subtext", 1,
+                {opacity:0},
+                {className: "+=fadeInRight"}
+                );
+
+var face = TweenMax.fromTo("#face", 1,
+              {opacity:0},
+              {opacity:1}
+              );
+
+var scene = new ScrollMagic.Scene({
+        triggerElement: "#description",
+        duration: 600,    // the scene should last for a scroll distance of 100px
+        pushFollowers: false
+    })
+    .setTween(timeline
+      .insert(subtext,1)
+      .add(face,3)
+      .add(brain,4)
+      .add(banner)
+      .add(squiggles)
+      .insert(question,8)
+    )
+    .setPin("#pin") // pins the element for the the scene's duration
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller); // assign the scene to the controller
+
