@@ -3,6 +3,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "hover";
+@import "animate";
 @import "components/color";
 @import "components/variables";
 @import "components/buttons";
@@ -229,6 +230,9 @@ a:not(.carousel-control):not(.btn-circle){
 .underline-dashed {
   border-bottom: 3px dashed $primary-teal;
 }
+p .underline-dashed {
+  border-bottom:2px dashed $primary-teal;
+}
 
 .right-quote {
   text-align: right;
@@ -283,6 +287,12 @@ Header
     display: flex;
     justify-content: center;
   }
+  .container {
+    margin-bottom: 0;
+  }
+  h2,h3 {
+    text-align: center;
+  }
   .row {
     margin: 0;
   }
@@ -326,6 +336,32 @@ Header
 .description-flow {
   display: flex;
   justify-content: center;
+}
+/*****************
+story
+******************/
+#description {
+  padding-bottom: 0;
+  .row {
+    margin-bottom: 0;
+  }
+  object {
+    max-width: 300px;
+  }
+  #squiggles, #brain, #banner {
+    position: absolute;
+  }
+  .intro-subtext {
+    margin-top: 1em;
+    font-size: 22px;
+  }
+  .question {
+    // border: 6px solid teal;
+    // padding: 5px 15px;
+    opacity: 0;
+    font-size: 26px;
+    color: teal;
+  }
 }
 
 /*****************

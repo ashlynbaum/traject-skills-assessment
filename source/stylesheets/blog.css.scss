@@ -2,17 +2,24 @@ $light-white: #F4F4F4;
 
 
 #articles{
-  background-image: image-url("white_bed_sheet/white_bed_sheet.png");
+  // background-image: image-url("white_bed_sheet/white_bed_sheet.png");
+  background-color: $light-white;
   p{
     font-size: 18px;
   }
 
   #header{
     background: image-url("footer_lodyas.png");
-    min-height: 0;
+    min-height: 200px;
     text-align: left;
     object {
       width: 400px;
+    }
+  }
+  .blog-info {
+    span {
+      margin: 0 10px;
+      color: gray;
     }
   }
 
@@ -38,7 +45,7 @@ $light-white: #F4F4F4;
   }
 
   #main{
-    margin: 2em auto;
+    margin: 0 auto;
     max-width: 1000px;
     background-color: $light-white;
     padding: 2em 3em;
@@ -47,8 +54,12 @@ $light-white: #F4F4F4;
   .title .blog-date{
     color: gray;
   }
-  .sidebar{
+  .recent_articles{
     margin-top: 1em;
+    border-top: 1px solid #ccc;
+    li {
+      font-size: 1.5em;
+    }
   }
   #footer{
     margin-top: 3em;

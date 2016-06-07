@@ -47,12 +47,13 @@
       </div><!-- /.container-fluid -->
     </nav>
 
+
     <!-- Jubotron -->
     <div id="header">
       <div class="jumbotron">
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1">
-            <img src="../../images/logos/traject-logo-wtag-white-02.svg" alt="Traject">
+            <!-- <img src="../../images/logos/traject-logo-wtag-white-02.svg" alt="Traject"> -->
             <!-- <object data="../../images/logos/traject-logo-wtag-white-02.svg" type="image/svg+xml"></object> -->
             <h1>Traject</h1>
             <h2>growing the knowledge economy</h2>
@@ -63,16 +64,35 @@
 
     <div id="main" role="main">
       <div class="row">
-        <div class="col-md-9">
-          <div class="title">
-            <h2><%= current_article.title unless current_article.nil? %></h2>
-            <p class="blog-date"><%= current_article.date.strftime('%B %d, %Y') unless current_article.nil? %></p>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="title">
+              <h2><%= current_article.title unless current_article.nil? %></h2>
+              <p class="blog-info">
+                <span>
+                 <i class="fa fa-calendar" aria-hidden="true"></i>
+                 <%= current_article.date.strftime('%B %d, %Y') unless current_article.nil? %>
+                </span>
+                <span>
+                  <i class="fa fa-tag" aria-hidden="true"></i>
+                  <% current_article.tags.each do |tag| %>
+                    <% if tag === current_article.tags.last %>
+                      <%= link_to tag, tag_path(tag)  %>
+                    <% else %>
+                      <%= link_to tag + ",", tag_path(tag)  %>
+                    <% end %>
+                  <% end %>
+                </span>
+
+
+              </p>
+            </div>
+            <!-- Yield in blog articles -->
+              <%= yield %>
           </div>
-          <!-- Yield in blog articles -->
-            <%= yield %>
         </div>
-        <div class="col-md-3 sidebar">
-          <aside>
+        <div class="row recent_articles">
+          <aside class="col-md-10 col-md-offset-1">
             <h4>Recent Articles</h4>
             <ul class="list-unstyled">
               <% blog.articles[0...10].each do |article| %>
@@ -80,7 +100,7 @@
               <% end %>
             </ul>
 
-            <h4>Categories</h4>
+<!--             <h4>Categories</h4>
             <ul class="list-unstyled">
               <% blog.tags.each do |tag, articles| %>
                 <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag)%></li>
@@ -92,7 +112,7 @@
               <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
                 <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
               <% end %>
-            </ul>
+            </ul> -->
           </aside>
         </div>
       </div>
