@@ -71,8 +71,6 @@ $light-white: #F4F4F4;
 
 @media screen and (max-width: 768px) {
   #articles #header{
-    background-size: 100px;
-    background-position: 0 4em;
     .jumbotron h1{
       font-size: 2em;
     }
@@ -89,7 +87,11 @@ $light-white: #F4F4F4;
       font-size: 20px;
     }
   }
+  #articles #main {
+    padding: 0;
+  }
 }
+
 @media screen and (min-width: 769px) {
   #articles .title{
     margin-bottom: 40px;

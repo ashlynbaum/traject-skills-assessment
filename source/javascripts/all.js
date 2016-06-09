@@ -73,60 +73,6 @@ var loadPage = function(element) {
 loadPage('a.next-page');
 loadPage('a.prev-page');
 
-// Animate portfolio
-$('#portfolio').find('.item').hover(
-  function() {
-    $(this).find('img').removeClass('animate-out').addClass('animate-shrink');
-    $(this).find('h2').removeClass('animate-out').addClass('animate-grow-large');
-  }, function() {
-    $(this).find('img').addClass('animate-out').removeClass('animate-shrink');
-    $(this).find('h2').addClass('animate-out').removeClass('animate-grow-large');
-  }
-);
-
-// Animate Education
-$(window).scroll(function() {
-  $('#education').find('img').each(function() {
-    var imagePos = $(this).offset().top;
-
-    var topOfWindow = $(window).scrollTop();
-    var bottomOfWindow = $(window).scrollTop() + $(window).height();
-    if (imagePos < topOfWindow + 600) {
-      $(this).addClass('animated pulse');
-      $(this).closest('.row').find('.uni').addClass('animated pulse');
-    }
-    if (imagePos < topOfWindow || imagePos > bottomOfWindow ) {
-      $(this).removeClass('animated pulse');
-      $(this).closest('.row').find('.uni').removeClass('animated pulse');
-    }
-  });
-  // Animate about
-  $('#about').find('a').each(function() {
-    var imagePos = $(this).offset().top;
-
-    var topOfWindow = $(window).scrollTop();
-    var bottomOfWindow = $(window).scrollTop() + $(window).height();
-    if (imagePos < topOfWindow + 600) {
-      $(this).addClass('animated bounce');
-    }
-    if (imagePos < topOfWindow || imagePos > bottomOfWindow ) {
-      $(this).removeClass('animated bounce');
-    }
-  });
-  // Animate Contact
-    $('#contact').find('.anmt').each(function() {
-    var imagePos = $(this).offset().top;
-
-    var topOfWindow = $(window).scrollTop();
-    var bottomOfWindow = $(window).scrollTop() + $(window).height();
-    if (imagePos < topOfWindow + 600) {
-      $(this).addClass('animated shake');
-    }
-    if (imagePos < topOfWindow || imagePos > bottomOfWindow ) {
-      $(this).removeClass('animated shake');
-    }
-  });
-});
 
 // parallax
 $('#header').parallax({
@@ -135,14 +81,6 @@ $('#header').parallax({
   naturalWidth: 5760,
   naturalHeight: 3840
 });
-
-// $('#action').parallax({
-//   imageSrc: 'images/angle-line.svg',
-//   speed: 0.9,
-//   naturalWidth: 900,
-//   naturalHeight: 900,
-//   zIndex: 1
-//   })
 
 // Show text on toggle button
 
@@ -165,17 +103,7 @@ var toggleShow = function(buttons){
 
 // toggle accredited migrant buttons
 toggleShow($('.action'));
-// make svg image clickable
-// $(window).load(function () {
-//   var a = document.getElementById("migrant-img");
-//   var b = document.getElementById("accredited-img")
-//   var svgDocA = a.contentDocument; //get the inner DOM of user.svg
-//   var svgDocB = b.contentDocument;
-//   var clickA = svgDocA.getElementById("Layer_1"); //get the inner element by id
-//   var clickb = svgDocB.getElementById("Layer_1"); //get the inner element by id
-//   clickA.addEventListener("mousedown",function(){$(".action.migrant").trigger('click')},false);
-//   clickb.addEventListener("mousedown",function(){$(".action.accredited").trigger('click')},false);
-// });
+
 $(".action.migrant").on("click", function(){
   if ( !(this.classList.contains("on")) ) {
     this.classList.add("on");
@@ -241,7 +169,6 @@ var face = TweenMax.fromTo("#face", 1,
 
 
 
-// we'd only like to use iScroll for mobile...
 if (isMobile) {
   var scene = new ScrollMagic.Scene({
         triggerElement: "#description",
@@ -250,11 +177,11 @@ if (isMobile) {
     })
     .setTween(timeline
       .insert(subtext,1)
-      .add(face,3)
-      .add(brain,4)
+      .add(face,1)
+      .add(brain,2)
       .add(banner)
       .add(squiggles)
-      .insert(question,8)
+      .insert(question,5)
     )
     // .setPin("#pin") // pins the element for the the scene's duration
     // .addIndicators() // add indicators (requires plugin)
