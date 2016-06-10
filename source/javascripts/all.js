@@ -74,13 +74,6 @@ loadPage('a.next-page');
 loadPage('a.prev-page');
 
 
-// parallax
-$('#header').parallax({
-  imageSrc: 'images/ocean-teal-1.jpg',
-  speed: 0.85,
-  naturalWidth: 5760,
-  naturalHeight: 3840
-});
 
 // Show text on toggle button
 
@@ -127,6 +120,7 @@ var controller = new ScrollMagic.Controller({
     triggerHook: 'onLeave'
   }
 });
+
 
 
 // Animation for intro.erb
@@ -227,3 +221,16 @@ var sceneStory = new ScrollMagic.Scene({
     // .setPin(".story-cartoon") // pins the element for the the scene's duration
     // .addIndicators() // add indicators (requires plugin)
     .addTo(controllerStory); // assign the scene to the controller
+
+
+
+
+// parallax
+$('#header').parallax({
+  imageSrc: isMobile ? 'images/ocean-teal-mobile.jpg' : 'images/ocean-teal-1.jpg',
+  speed: 0.85,
+  naturalWidth: 5760,
+  naturalHeight: 3840
+});
+
+
