@@ -8,9 +8,7 @@ hljs.initHighlightingOnLoad();
 // $(".flat-icon").flatshadow({
 //   color: "#2bbbad", // Background color of elements inside. (Color will be random if left unassigned)
 //   angle: "SE", // Shadows direction. Available options: N, NE, E, SE, S, SW, W and NW. (Angle will be random if left unassigned)
-//   fade: true, // Gradient shadow effect
-//   // boxShadow: "#d7cfb9" // Color of the Container's shadow
-// });
+hey this added
 
 
 // Highlight navbar elements on page
