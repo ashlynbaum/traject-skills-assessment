@@ -5,12 +5,12 @@
 
 hljs.initHighlightingOnLoad();
 
-$(".flat-icon").flatshadow({
-  color: "#2bbbad", // Background color of elements inside. (Color will be random if left unassigned)
-  angle: "SE", // Shadows direction. Available options: N, NE, E, SE, S, SW, W and NW. (Angle will be random if left unassigned)
-  fade: true, // Gradient shadow effect
-  // boxShadow: "#d7cfb9" // Color of the Container's shadow
-});
+// $(".flat-icon").flatshadow({
+//   color: "#2bbbad", // Background color of elements inside. (Color will be random if left unassigned)
+//   angle: "SE", // Shadows direction. Available options: N, NE, E, SE, S, SW, W and NW. (Angle will be random if left unassigned)
+//   fade: true, // Gradient shadow effect
+//   // boxShadow: "#d7cfb9" // Color of the Container's shadow
+// });
 
 
 // Highlight navbar elements on page
@@ -113,6 +113,24 @@ $(".action.accredited").on("click", function(){
     toggleShow($('.action'))
   }
 })
+
+// // Projects
+// // Annimation for cover hover projects
+// $(".portfolio-items a").hover( function () {
+//     var mt = $(this).find('p').outerHeight();
+
+//     $(this).find('img').stop().animate({'opacity': 0.1}, 100);
+//     $(this).find('p').stop().animate({'opacity': 1, 'top': '50%', 'margin-top': '-' + mt/2 + 'px'}, 300, function() {
+//         $(this).find('span').stop().animate({'opacity': 1, 'top':0}, 300);
+//     });
+// }, function () {
+//     $(this).find('img').stop().animate({'opacity': 1});
+//     $(this).find('p').stop().animate({'opacity': 0, 'top': '90%'}, 300, function() {
+//         $(this).removeAttr('style');
+//         $(this).find('span').removeAttr('style');
+//     });
+// });
+
 
 // Animation for info section using scrollMagic
 var controller = new ScrollMagic.Controller({
